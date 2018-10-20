@@ -58,7 +58,7 @@
         <div class="row">
             <div class="col-md-4">
                 <h2>About me</h2>
-                <p>Hello beautiful people that just checked my website.I am from Manipur and i am a proud meitie.I loved to play computer games,programming,watching youtube video. My first programing language was c# and my favourite programming language is python.The programming language i currently know is python,c#,c++ and dart.</p>
+                <p>Hello beautiful people that just checked my.I am from Manipur and i am a proud meitie.I loved to play computer games,programming,watching youtube video. My first programing language was c# and my favourite programming language is python.The programming language i currently know is python,c#,c++ and dart.</p>
                 <h2>Contact & Social Media</h2>
                 <i class="fa fa-google" aria-hidden="true"></i>
                 <strong>Email: </strong>labhijitsingh13@gmail.com
@@ -99,7 +99,7 @@
 	<script src="js/underscore-min.js"></script>
     <script src="js/gh3.js"></script>
     <script>
-    var username = new Gh3.User("FR0ST1N")
+    var username = new Gh3.User("AbhijitL")
   ,	branchProperties = $("ul");
   var repo = new Gh3.Repositories(username);
 
@@ -109,17 +109,17 @@
     }
 
     repo.eachRepository(function (repository) {
-        var AbhijitL = new Gh3.Repository(repository.name, AbhijitL);
+        var SinRepo  = new Gh3.Repository(repository.name, username);
 
-        AbhijitL.fetch(function (err, res) {
+        SinRepo.fetch(function (err, res) {
           if(err) {
             console.log("Error", err.message, res.status)
             throw err
           }
 			
-			if(AbhijitL.fork == false){
+			if(SinRepo.fork == false){
 			        branchProperties.append(
-          $('<li>').append('<a href="'+AbhijitL.html_url+'" class ="hvr-push">'+AbhijitL.name+' : '+AbhijitL.description+'</a></li>')
+          $('<li>').append('<a href="'+SinRepo.html_url+'" class ="hvr-push">'+SinRepo.name+' : '+SinRepo.description+'</a></li>')
         );
 		}
         });
