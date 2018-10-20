@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Too Minimal</title>
+    <title>AbhijitL</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -58,7 +58,7 @@
         <div class="row">
             <div class="col-md-4">
                 <h2>About me</h2>
-                <p>Hello my name is above.I am from Manipur and i am a proud meitie.I loved to play computer games,programming,watching youtube video. My first programing language was c# and my favourite programming language is python.The programming language i currently know is python,c#,c++ and dart.</p>
+                <p>Hello beautiful people that just checked my website.I am from Manipur and i am a proud meitie.I loved to play computer games,programming,watching youtube video. My first programing language was c# and my favourite programming language is python.The programming language i currently know is python,c#,c++ and dart.</p>
                 <h2>Contact & Social Media</h2>
                 <i class="fa fa-google" aria-hidden="true"></i>
                 <strong>Email: </strong>labhijitsingh13@gmail.com
@@ -109,17 +109,17 @@
     }
 
     repo.eachRepository(function (repository) {
-        var SinRepo = new Gh3.Repository(repository.name, AbhijitL);
+        var AbhijitL = new Gh3.Repository(repository.name, AbhijitL);
 
-        SinRepo.fetch(function (err, res) {
+        AbhijitL.fetch(function (err, res) {
           if(err) {
             console.log("Error", err.message, res.status)
             throw err
           }
 			
-			if(SinRepo.fork == false){
+			if(AbhijitL.fork == false){
 			        branchProperties.append(
-          $('<li>').append('<a href="'+SinRepo.html_url+'" class ="hvr-push">'+SinRepo.name+' : '+SinRepo.description+'</a></li>')
+          $('<li>').append('<a href="'+AbhijitL.html_url+'" class ="hvr-push">'+AbhijitL.name+' : '+AbhijitL.description+'</a></li>')
         );
 		}
         });
