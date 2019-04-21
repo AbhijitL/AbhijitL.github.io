@@ -1,0 +1,31 @@
+<h1 style="text-align: center;"><span style="text-decoration: underline;">Walking insect bot (not really)</span></h1>
+<p><u>1. You need&nbsp; Arduino, 2 servos,1 ultrasonic sensor, 2 metallic wire, hot glue or anything which can stick.</u></p>
+<p><u>look here imp-&gt;&gt;&gt;&nbsp; &nbsp; &nbsp;it can move backward and turn to the right when there is&nbsp; obstacle thanks to the ultrasonic sensor in the front</u></p>
+<p><u>Put the things according to the diagram&nbsp;</u></p>
+<p><img src="https://i.ibb.co/Xp71SNk/1.jpg" alt="diagram" width="441" height="275" /></p>
+<p>With some&nbsp; &nbsp; magic and ........(idk) you will get this-&gt;&gt;&gt;&gt;</p>
+<p>Lol low-quality image captured from laptop</p>
+<p><img src="https://i.ibb.co/R4SXxSR/WIN-20190421-17-36-30-Pro.jpg" alt="lol low quality" width="393" height="221" /></p>
+<p>&nbsp;</p>
+<p>2.</p>
+<p><img src="https://i.ibb.co/PGQyXQS/WIN-20190421-17-41-53-Pro.jpg" alt="adsds" width="404" height="227" /></p>
+<p>&nbsp;</p>
+<p>THe Code is down here lol-------&gt;</p>
+<p>&nbsp;</p>
+<p>//Programmed by Abhijit Leihaorambam</p>
+<p>#include&lt;Servo.h&gt;</p>
+<p>Servo frontServo;<br />Servo rearServo;</p>
+<p>int centerPos = 90;<br />int frontRightUp = 72;<br />int frontLeftUp = 108;<br />int backRightForward = 75;<br />int backLeftForward = 105;<br />int walkSpeed = 150;//how long to wait bet step in 1 sec</p>
+<p>//ultra sonic variable <br />int pingPin = 4;<br />long int duration, distanceInches;<br />long distanceFront=0;//cm<br />int startAvoidanceDistance= 20;//cm</p>
+<p>long microsecondsToInches(long microseconds){<br /> return microseconds / 74/2;<br /> }<br />long microsecondsToCentimeters(long microseconds){<br /> return microseconds/29/2;<br /> }</p>
+<p>long distanceCM(){<br /> pinMode(pingPin, OUTPUT);<br /> digitalWrite(pingPin,LOW);<br /> delayMicroseconds(2);<br /> digitalWrite(pingPin,HIGH);<br /> delayMicroseconds(5);<br /> digitalWrite(pingPin,LOW);</p>
+<p>pinMode(pingPin,INPUT);<br /> duration = pulseIn(pingPin,HIGH);</p>
+<p>distanceInches = microsecondsToInches(duration);<br /> return microsecondsToCentimeters(duration);<br /> }</p>
+<p>void center(){<br /> frontServo.write(centerPos);<br /> rearServo.write(centerPos);<br /> }</p>
+<p><br />void moveForward(){<br /> frontServo.write(frontRightUp);<br /> rearServo.write(backLeftForward);<br /> delay(125);<br /> frontServo.write(centerPos);<br /> rearServo.write(centerPos);<br /> delay(65);<br /> frontServo.write(frontLeftUp);<br /> rearServo.write(backRightForward);<br /> delay(125);<br /> frontServo.write(centerPos);<br /> rearServo.write(centerPos);<br /> delay(65);<br /> }</p>
+<p>void moveBackward(){<br /> frontServo.write(frontRightUp);<br /> rearServo.write(backRightForward);<br /> delay(125);<br /> frontServo.write(centerPos);<br /> rearServo.write(centerPos);<br /> delay(65);<br /> frontServo.write(frontLeftUp);<br /> rearServo.write(backLeftForward);<br /> delay(125);<br /> frontServo.write(centerPos);<br /> rearServo.write(centerPos);<br /> delay(65);<br /> }<br />void moveBackRight(){<br /> frontServo.write(frontRightUp);<br /> rearServo.write(backRightForward-6);<br /> delay(125);<br /> frontServo.write(centerPos);<br /> rearServo.write(centerPos-6);<br /> delay(65);<br /> frontServo.write(frontLeftUp+9);<br /> rearServo.write(backLeftForward-6);<br /> delay(125);<br /> frontServo.write(centerPos);<br /> rearServo.write(centerPos);<br /> delay(65);<br /> }</p>
+<p>void moveTurnLeft(){<br /> frontServo.write(frontRightUp-9);<br /> rearServo.write(backLeftForward-9);<br /> delay(125);<br /> frontServo.write(centerPos-9);<br /> rearServo.write(centerPos-9);<br /> delay(65);<br /> frontServo.write(frontLeftUp+9);<br /> rearServo.write(backRightForward-9);<br /> delay(125);<br /> frontServo.write(centerPos-9);<br /> rearServo.write(centerPos-9);<br /> delay(65);<br /> }</p>
+<p><br />void setup() {<br /> frontServo.attach(2);<br /> rearServo.attach(3);<br /> pinMode(pingPin,OUTPUT);<br />}</p>
+<p><br />void loop() {<br /> distanceFront = distanceCM();<br /> if(distanceFront &gt; 1){<br /> if(distanceFront&lt;startAvoidanceDistance){<br /> for(int i = 0; i&lt;=8; i++){<br /> moveBackRight();<br /> delay(walkSpeed);<br /> }<br /> for(int i = 0; i&lt;=10;i++){<br /> moveForward();<br /> delay(walkSpeed);<br /> }<br /> }else{<br /> moveForward();<br /> delay(walkSpeed);<br /> }<br /> }<br />}</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
