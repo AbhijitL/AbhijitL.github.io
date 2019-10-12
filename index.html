@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta name="google-site-verification" content="hCGfGwsoxtb03zd8q3_15E44XlMPYSChvTeYAIkp9Yg" />
     <meta charset="utf-8">
@@ -11,7 +10,6 @@
     <link rel="shortcut icon" type="image/gif" href="img/icon.png">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -32,7 +30,6 @@
         body {
             font-family: 'Quicksand', serif;
         }
-
         .line {
             border: 0;
             height: 1px;
@@ -41,13 +38,11 @@
             background-image: -ms-linear-gradient(left, #f0f0f0, #745656, #f0f0f0);
             background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
         }
-
         li,
         a:hover {
             text-decoration: none;
             color: grey;
         }
-
         li,
         a {
             color: black;
@@ -55,7 +50,6 @@
     </style>
     <link href="css/hover.css" rel="stylesheet" media="all">
 </head>
-
 <body>
     <div class="container">
         <div class="header" style="text-align:center;">
@@ -67,32 +61,28 @@
         <div class="row">
             <div class="col-md-4">
                 <h2>About me</h2>
-                <p>Hello beautiful people that just checked my Website.I am from Jiribam,Manipur,India and I am a proud Meitei ꯃꯩꯇꯩ.</p>
-                <h4>Programming language I currently know.</h4>
+                <p>Hello beautiful people that just checked my Website.I am from Jiribam,Manipur and i am a proud meitei.</p>
+                <h2>Programming language I currently know.</h2>
                 <p>
                     C++ , Python , Dart , C# and JavaScript.
                 </p>
-                <h4>Favourite movies.</h4>
+                <h2>Favourite movies.</h2>
                 <p>
                     <strong>Alita Battle angel: </strong><a href="https://youtu.be/cislZ9S0ocA">This movie is my favourtie i really loved this movie #alitaarmy.</a>   
-                    <img src="https://media.giphy.com/media/dn05iMyGPqitBsydiD/giphy.gif" alt="Alita" class="responsive" width="100" height="100">
+                    <img src="https://media.giphy.com/media/elproKc50V3GHuq3B6/giphy.gif" alt="Alita" class="responsive" width="400" height="400">
                 </p>
-                <h4>Hobby.</h4>
-                <p>
-                    <i class="fa fa-code" aria-hidden="true"></i> Coding  , <i class="fa fa-gamepad" aria-hidden="true"></i> Playing games(Gamer) and tinkering with Arduino . 
-                </p>
-                <h4>My Game you can play online:</h4>
+                <h3>My Game you can play online:</h3>
                 <p>
                 <strong>PingPong: </strong><a href="https://abhijitl.github.io/PingPong-game-webgl/">You can play with AI or with a friend.</a>
                 <p>
                 <p>
-                    <strong>Ramams: </strong><a href="https://milkandegg.itch.io/ramams">My first game jam made in Godot .</a>
+                    <strong>Ramams: </strong><a href="https://milkandegg.itch.io/ramams">My first game ham game.</a>
                 </p>
-                 <h4>My Apps:</h4>
+                 <h3>My Apps:</h3>
                  <p>
                  <strong>Check my latest apps: </strong><a href="myapps.html">Check my latest apps made by me</a>
                  <p>
-                <h4>My Simulations:</h4>
+                <h3>My Simulations:</h3>
                 <p>
                     <strong>Game of life: </strong><a href="gameoflife.html">Click here to simulate</a>
                 </p>
@@ -102,11 +92,11 @@
                 <p>
                     <strong>Draw: </strong><a href="draw.html">Click here to Draw a beautiful art</a>
                 </p>                 
-                <h4>Tutorial:</h4>
+                <h3>Tutorail:</h3>
                 <p>
                     <strong>SpiderBot: </strong><a href="tu.html">Obstacle avoidance robot.</a>
                 </p>
-                <h4>Contact & Social Media</h4>
+                <h2>Contact & Social Media</h2>
                 <i class="fa fa-google" aria-hidden="true"></i>
                 <strong>Email: </strong>labhijitsingh13@gmail.com
                 <br>
@@ -119,11 +109,9 @@
                 <i class="fa fa-github" aria-hidden="true"></i>
                 <strong>Github: </strong><a href="https://github.com/AbhijitL">Github Account</a>
                 <br>
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-                <strong>Instagram: </strong><a href="https://www.instagram.com/labhijits/">Instagram Account</a>
-                <br>
                 <a href='https://www.free-counters.org/'>Hit Counter</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=186e0f9aa59b07693a29931788d35fef97b6c51e'></script>
                 <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/475050/t/1"></script>
+                
             </div>
             <div class="col-md-4">
                 <h2>Projects</h2>
@@ -158,15 +146,12 @@
     var username = new Gh3.User("AbhijitL")
   ,	branchProperties = $("ul");
   var repo = new Gh3.Repositories(username);
-
   repo.fetch({page:1, per_page:500},"next", function (err, res) {
     if(err) {
       console.log("Error");
     }
-
     repo.eachRepository(function (repository) {
         var SinRepo  = new Gh3.Repository(repository.name, username);
-
         SinRepo.fetch(function (err, res) {
           if(err) {
             console.log("Error", err.message, res.status)
@@ -183,5 +168,4 @@
   });
   </script>
 </body>
-
 </html>
