@@ -3,9 +3,7 @@
  // Model URL
  let imageModelURL = 'https://teachablemachine.withgoogle.com/models/0dk2IeET/';
 
- // Classifier Variable
- let classifier;
- 
+
  // Video
  let video;
  let flippedVideo;
