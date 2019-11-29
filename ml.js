@@ -2,7 +2,8 @@
  let classifier;
  // Model URL
  let imageModelURL = 'https://teachablemachine.withgoogle.com/models/0dk2IeET/';
-
+let input; 
+let img;
 
  // Video
  let video;
@@ -17,12 +18,11 @@
 
  function setup() {
    createCanvas(320, 260);
+  input = createFileInput(handleFile); 
+  input.position(0, 0); 
    // Create the video
-   video = createCapture(VIDEO);
-   video.size(320, 240);
-   video.hide();
 
-   flippedVideo = ml5.flipImage(video)
+   flippedVideo = ml5.flipImage(img)
    // Start classifying
    classifyVideo();
  }
@@ -38,10 +38,16 @@
    textAlign(CENTER);
    text(label, width / 2, height - 4);
  }
-
+function handleFile(file) { 
+  print(file); 
+  if (file.type === 'image') { 
+    img = createImg(file.data); 
+    img.hide(); 
+  } 
+}
  // Get a prediction for the current video frame
  function classifyVideo() {
-   flippedVideo = ml5.flipImage(video)
+   flippedVideo = ml5.flipImage(img)
    classifier.classify(flippedVideo, gotResult);
  }
 
