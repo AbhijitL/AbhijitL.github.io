@@ -4,7 +4,7 @@
  let imageModelURL = 'https://teachablemachine.withgoogle.com/models/0dk2IeET/';
 let input; 
 let img;
-
+let Images
  // Video
  let video;
  let flippedVideo;
@@ -21,8 +21,10 @@ let img;
   input = createFileInput(handleFile); 
   input.position(0, 0); 
    // Create the video
-
-   flippedVideo = ml5.flipImage(img)
+   Images = loadImage(img)
+  Images.size(320,240)
+  Images.hide()
+   flippedVideo = ml5.flipImage(Images)
    // Start classifying
    classifyVideo();
  }
@@ -47,7 +49,7 @@ function handleFile(file) {
 }
  // Get a prediction for the current video frame
  function classifyVideo() {
-   flippedVideo = ml5.flipImage(img)
+   flippedVideo = ml5.flipImage(Images)
    classifier.classify(flippedVideo, gotResult);
  }
 
