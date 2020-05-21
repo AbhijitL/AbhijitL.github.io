@@ -138,7 +138,7 @@ nav li a:hover{
 }
 
 .pr h3 a{
-    font-size: 20px;
+    font-size: 15px;
 	right: 5;
 	top:auto;
 	height:auto;
@@ -146,3 +146,13 @@ nav li a:hover{
     text-decoration: none;
     color: black;
 }
+.pr h3 a:hover{
+    font-size: 15px;
+	right: 5;
+	top:auto;
+	height:auto;
+	width:69%;
+    text-decoration: underline;
+    color: black;
+}
+
