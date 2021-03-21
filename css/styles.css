@@ -10,7 +10,7 @@ body{
   }
 
 .button:hover{
-    background-color: #342E37;
+    background-color: black;
     color: white;
 }
 
@@ -22,7 +22,7 @@ img{
     max-width: 100%;
 }
 nav {
-    background-color: #F1D9A7;
+    background-color: #f7ddcd;
     position: fixed;
     z-index: 1;
     width: 100%;
@@ -80,9 +80,9 @@ ul li{
     margin: 10px 0;
 }
 .button {
-    border: 1px solid #342E37;
+    border: 1px solid black;
     text-decoration: none;
-    color: #342E37;
+    color: black;
     padding: 10px 20px;
     margin-top: 40px;
     display: inline-block;
@@ -117,10 +117,10 @@ figcaption{
 }
 
 .blue {
-    background-color: #F1D9A7;
+    background-color: #f7ddcd;
     background-size: cover;
 }
-    
+
 footer{
     text-align: center;
 }
@@ -131,7 +131,7 @@ footer h2{
 }
 nav li a{
     text-decoration: none;
-    color: #342E37;
+    color: black;
 }
 nav li a:hover{
     text-decoration: underline;
@@ -144,7 +144,7 @@ nav li a:hover{
 	height:auto;
 	width:69%;
     text-decoration: none;
-    color:#342E37;
+    color: black;
 }
 .pr h3 a:hover{
     font-size: 15px;
@@ -153,6 +153,6 @@ nav li a:hover{
 	height:auto;
 	width:69%;
     text-decoration: underline;
-    color: #342E37;
+    color: black;
 }
 
