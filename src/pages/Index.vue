@@ -67,5 +67,6 @@ h1 h2 {
 .main-body {
   padding-right: 15%;
   padding-left: 15%;
+  padding-top: 5%;
 }
 </style>

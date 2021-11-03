@@ -6,5 +6,6 @@
 
 module.exports = {
   siteName: 'Abhijitl',
+  siteUrl: "https://abhijitl.me/",
   plugins: []
 }

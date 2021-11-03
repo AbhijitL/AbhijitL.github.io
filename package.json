@@ -11,6 +11,8 @@
     "vuesax": "^4.0.1-alpha.25"
   },
   "devDependencies": {
-    "@iconify/vue": "^3.0.0"
+    "@iconify/vue": "^3.0.0",
+    "sass": "^1.43.4",
+    "sass-loader": "^10.1.1"
   }
 }

@@ -5,7 +5,7 @@ import DefaultLayout from '~/layouts/Default.vue'
 import Vue from 'vue'
 import Vuesax from 'vuesax'
 import 'vuesax/dist/vuesax.css'
-
+import '../src/styles.css'
 
 Vue.use(Vuesax, {
   theme: {
