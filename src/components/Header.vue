@@ -3,8 +3,9 @@
     <h2 v-html="$static.metadata.siteName" />
     <nav>
       <g-link to="/">Home</g-link>
-      <g-link to="/about">About</g-link>
+      <g-link to="/">Art</g-link>
       <g-link to="/">Blog</g-link>
+      <g-link to="/about">About</g-link>
     </nav>
   </header>
 </template>
@@ -17,7 +18,9 @@ query {
 }
 </static-query>
 
-<style   scoped>
+<style  lang = "scss" scoped>
+@import "~/assets/img/Sass/colors.scss";
+
 header {
   display: flex;
   flex-direction: row;
@@ -25,8 +28,8 @@ header {
   justify-content: space-between;
   width: calc(100% - 12rem);
   padding: 0.5rem 6rem;
-  background: #f7ddcd;
-  color: black;
+  background: $champangepink;
+  color: $oldlavender;
 }
 h2 {
   font-size: 1.4rem;

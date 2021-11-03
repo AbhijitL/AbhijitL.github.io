@@ -21,7 +21,18 @@ function addStyleResource(rule) {
 module.exports = {
   siteName: 'Abhijitl',
   siteUrl: "https://abhijitl.me/",
-  plugins: [],
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Post',
+        path: './blog/posts/*.md',
+      }
+    }
+  ],
+  templates: {
+    Post: '/blog/:title'
+  },
   chainWebpack(config) {
     // Load variables for all vue-files
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
