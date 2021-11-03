@@ -4,7 +4,7 @@
     <nav>
       <g-link to="/">Home</g-link>
       <g-link to="/">Art</g-link>
-      <g-link to="/">Blog</g-link>
+      <g-link to="/blog">Blog</g-link>
       <g-link to="/about">About</g-link>
     </nav>
   </header>
