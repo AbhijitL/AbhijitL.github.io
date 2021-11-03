@@ -36,9 +36,14 @@ export default {
 };
 </script>
 
-<style>
-.home-links a {
-  margin: 0;
+<style lang="scss" >
+@import "~/assets/img/Sass/colors.scss";
+
+.home-links {
+  a {
+    margin: 0;
+    color: $darkliver;
+  }
 }
 h1 {
   font-size: 50px;
