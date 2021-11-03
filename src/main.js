@@ -4,6 +4,7 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import Vue from 'vue'
 import Vuesax from 'vuesax'
+import VueDisqus from 'vue-disqus'
 import 'vuesax/dist/vuesax.css'
 import '../src/styles.css'
 
@@ -20,4 +21,5 @@ Vue.use(Vuesax, {
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+  Vue.use(VueDisqus)
 }
