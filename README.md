@@ -4,8 +4,8 @@
 
 `npm install --global @gridsome/cli`
 
-### 2. Create a Gridsome project
+### 2. Run the project.
 
-1. `cd ABHIJITL.GITHUB.IO` to open the folder
+1. `cd AbhijitL.github.io` to open the folder
 2. `gridsome develop` to start a local dev server at `http://localhost:8080`
 
