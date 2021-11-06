@@ -2,8 +2,8 @@
   <Layout>
     <div class="main-body">
       <header>
-        <vs-row justify="space-around" align="center" direction="row">
-          <vs-col w="6">
+        <div class="columns is-vcentered">
+          <div class="column">
             <h1>
               Hi, I'm <br />
               Abhijit Leihaorambam
@@ -12,18 +12,39 @@
               <li>_3DModeler</li>
               <li>_Programmer</li>
             </ul>
-            <a
-              href="https://www.instagram.com/labhijits/"
-              target="_blank"
-              class="button"
-              >Instagram</a
-            >
-          </vs-col>
-          <figure>
-            <g-image src="~/assets/img/pro.png" class="intro-img" width="300" />
-            <figcaption>Pixel version of me</figcaption>
-          </figure>
-        </vs-row>
+            <div columns>
+              <a
+                href="https://www.instagram.com/labhijits/"
+                target="_blank"
+                class="button"
+                >Instagram</a
+              >
+              <a
+                href="https://twitter.com/leihaorambam"
+                target="_blank"
+                class="button"
+                >Twitter</a
+              >
+              <a
+                href="https://www.artstation.com/labhijits"
+                target="_blank"
+                class="button"
+                >Artstation</a
+              >
+            </div>
+          </div>
+          <div class="column is-one-fifth"></div>
+          <div class="column">
+            <figure>
+              <g-image
+                src="~/assets/img/pro.png"
+                class="intro-img"
+                width="300"
+              />
+              <figcaption>Pixel version of me</figcaption>
+            </figure>
+          </div>
+        </div>
       </header>
       <footer>
         <p>Made by Abhijit Leihaorambam(me;)</p>
@@ -49,7 +70,7 @@ export default {
 
 figcaption {
   font-size: 15px;
-  text-align: center;
+  text-align: start;
   margin-top: 10px;
 }
 footer {
@@ -60,8 +81,10 @@ footer {
   border: 2px solid black;
   text-decoration: none;
   color: black;
+  background-color: inherit;
   padding: 5px 5px;
-  // margin-top: 40px;
+  margin-top: 10px;
+  margin-right: 6px;
   display: inline-block;
   border-radius: 5px;
   transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
@@ -128,5 +151,6 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -45px;
+  padding: 50px;
 }
 </style>

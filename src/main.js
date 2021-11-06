@@ -3,26 +3,23 @@
 
 import DefaultLayout from '~/layouts/Default.vue'
 import Vue from 'vue'
-import Vuesax from 'vuesax'
 import VueDisqus from 'vue-disqus'
-import 'vuesax/dist/vuesax.css'
+import Buefy from 'buefy'
+import 'buefy/dist/buefy.css'
 import '../src/styles.scss'
 import 'prismjs/themes/prism-tomorrow.css'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 
 
-Vue.use(Vuesax, {
-  theme: {
-    primary: '#5b3cc4',
-    success: 'rgb(23, 201, 100)',
-    danger: 'rgb(242, 19, 93)',
-    warning: 'rgb(255, 130, 0)',
-    dark: 'rgb(36, 33, 69)'
-  }
-})
-
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://use.fontawesome.com/releases/v5.2.0/css/all.css'
+  })
+
   Vue.component('Layout', DefaultLayout)
-  Vue.use(VueDisqus)
+  Vue.use(Buefy, {
+    defaultIconPack: 'fas' // Font Awesome Solid
+  })
 }
