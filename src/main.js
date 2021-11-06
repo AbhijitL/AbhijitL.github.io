@@ -8,6 +8,7 @@ import VueDisqus from 'vue-disqus'
 import 'vuesax/dist/vuesax.css'
 import '../src/styles.scss'
 import 'prismjs/themes/prism-tomorrow.css'
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 
 
 Vue.use(Vuesax, {
