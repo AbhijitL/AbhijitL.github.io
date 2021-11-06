@@ -27,14 +27,24 @@ module.exports = {
       options: {
         typeName: 'Post',
         path: './blog/posts/*.md',
-        remark: {
-          plugins: [
-            '@gridsome/remark-prismjs'
-          ]
-        }
+        // remark: {
+        //   plugins: [
+        //     '@gridsome/remark-prismjs',
+
+        //   ]
+        // }
       }
     }
   ],
+
+  transformers: {
+    remark: {
+      plugins: [
+        '@gridsome/remark-prismjs',
+      ]
+    }
+  },
+
   templates: {
     Post: '/blog/:title'
   },
@@ -45,13 +55,5 @@ module.exports = {
     types.forEach(type => {
       addStyleResource(config.module.rule('scss').oneOf(type))
     })
-  }
-}
-
-transformers: {
-  remark: {
-    plugins: [
-      '@gridsome/remark-prismjs'
-    ]
   }
 }

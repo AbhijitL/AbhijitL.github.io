@@ -7,7 +7,7 @@ thumbnail: https://s.w-x.co/util/image/w/in-monkey%20baby.jpg?crop=16:9&width=48
 
 # hello
 Hello monkes this is my first blog on my own site that i created.
-```
+```js
 function hello(){
     console.log("Hello world");
 }
