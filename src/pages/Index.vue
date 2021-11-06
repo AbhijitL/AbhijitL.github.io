@@ -138,7 +138,7 @@ img {
 /* If the screen size is 600px or less, set the font-size of <div> to 30px */
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size: 40px;
+    font-size: 35px;
     line-height: 130%;
   }
 }
