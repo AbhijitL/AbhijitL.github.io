@@ -151,6 +151,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -45px;
-  padding: 50px;
+  padding-left: 50px;
+  padding-top: 10px;
 }
 </style>
