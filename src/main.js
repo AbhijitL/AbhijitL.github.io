@@ -22,4 +22,5 @@ export default function (Vue, { router, head, isClient }) {
   Vue.use(Buefy, {
     defaultIconPack: 'fas' // Font Awesome Solid
   })
+  Vue.use(VueDisqus)
 }
