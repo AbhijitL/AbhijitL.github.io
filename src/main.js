@@ -7,6 +7,7 @@ import Vuesax from 'vuesax'
 import VueDisqus from 'vue-disqus'
 import 'vuesax/dist/vuesax.css'
 import '../src/styles.css'
+import 'prismjs/themes/prism.css'
 
 Vue.use(Vuesax, {
   theme: {
