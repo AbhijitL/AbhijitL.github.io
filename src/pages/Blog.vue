@@ -5,9 +5,9 @@
         <div class="columns is-vcentered">
           <div class="column">
             <div class="column">
-              <vs-row justify="center">
+              <div class="column">
                 <h1>Blog Posts</h1>
-              </vs-row>
+              </div>
             </div>
             <div class="column">
               <nav>
@@ -56,5 +56,10 @@ query{
     color: $darkliver;
     text-decoration: none;
   }
+}
+
+h1 {
+  font-size: 44px;
+  font-weight: bold;
 }
 </style>
