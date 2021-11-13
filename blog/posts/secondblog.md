@@ -2,7 +2,7 @@
 title: Markdown-Benchmark
 author: Abhijit Leihaorambam
 date: 2021-11-03
-thumbnail: https://s.w-x.co/util/image/w/in-monkey%20baby.jpg?crop=16:9&width=480&format=pjpg&auto=webp&quality=60
+thumbnail: https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fkirkstrobeck.github.io%2Fwhatismarkdown.com%2Fimg%2Fmarkdown.png&f=1&nofb=1
 ---
 
 Markdown is intended to be as easy-to-read and easy-to-write as is feasible.Readability, however, is emphasized above all else. A Markdown-formatted

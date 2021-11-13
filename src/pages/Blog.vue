@@ -11,15 +11,28 @@
             </div>
             <div class="column">
               <nav>
-                <g-link
+                <div
+                  class="box"
                   v-for="post in $page.allPost.edges"
                   v-bind:key="post.node.id"
                   :to="post.node.path"
                 >
-                  <g-image :src="post.node.thumbnail" style="width: 10rem" />
-                  {{ post.node.title }}
-                  on {{ post.node.date }}
-                </g-link>
+                  <div class="columns is-vcentered">
+                    <div class="column is-one-third">
+                      <g-image
+                        :src="post.node.thumbnail"
+                        style="width: 10rem"
+                      />
+                    </div>
+                    <div class="column">
+                      <g-link v-bind:key="post.node.id" :to="post.node.path">
+                        <h2>
+                          {{ post.node.title }} on {{ post.node.date }}
+                        </h2></g-link
+                      >
+                    </div>
+                  </div>
+                </div>
               </nav>
             </div>
           </div>
@@ -60,6 +73,11 @@ query{
 
 h1 {
   font-size: 44px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 20px;
   font-weight: bold;
 }
 </style>
