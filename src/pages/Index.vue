@@ -2,8 +2,19 @@
   <Layout>
     <div class="main-body">
       <header>
-        <div class="columns is-vcentered">
-          <div class="column">
+        <div
+          class="
+            columns
+            is-variable
+            is-1-mobile
+            is-0-tablet
+            is-3-desktop
+            is-8-widescreen
+            is-2-fullhd
+            is-vcentered
+          "
+        >
+          <div class="column" style="padding-left: 100px">
             <h1>
               Hi, I'm <br />
               Abhijit Leihaorambam
@@ -33,8 +44,10 @@
               >
             </div>
           </div>
-          <div class="column is-one-fifth"></div>
-          <div class="column">
+          <div
+            class="column"
+            style="display: flex; justify-content: center; align-items: center"
+          >
             <figure>
               <g-image
                 src="~/assets/img/pro.png"
@@ -151,7 +164,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -45px;
-  padding-left: 50px;
+  // padding-left: 50px;
   padding-top: 10px;
 }
 </style>

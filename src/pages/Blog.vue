@@ -77,7 +77,7 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 23px;
   font-weight: bold;
 }
 </style>
