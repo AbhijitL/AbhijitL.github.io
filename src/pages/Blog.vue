@@ -67,17 +67,14 @@ query{
   nav a {
     display: block;
     color: $darkliver;
-    text-decoration: none;
   }
 }
 
 h1 {
   font-size: 44px;
-  font-weight: bold;
 }
 
 h2 {
   font-size: 23px;
-  font-weight: bold;
 }
 </style>

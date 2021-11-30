@@ -18,7 +18,7 @@
                   :src="$page.post.thumbnail"
                   quality="70"
                   class="center"
-                  style="width: auto; margin-left: auto; margin-right: auto"
+                  style="width: 500px; margin-left: auto; margin-right: auto"
                 />
               </div>
             </div>

@@ -42,6 +42,18 @@
                 class="button"
                 >Artstation</a
               >
+              <a
+                href="https://www.youtube.com/channel/UC3MOEDdCSSyfCvmUrtln0Cg/featured"
+                target="_blank"
+                class="button"
+                >YouTube</a
+              >
+              <a
+                href="https://github.com/AbhijitL"
+                target="_blank"
+                class="button"
+                >Github</a
+              >
             </div>
           </div>
           <div
@@ -59,6 +71,8 @@
           </div>
         </div>
       </header>
+      <skills />
+      <bruh />
       <footer>
         <p>Made by Abhijit Leihaorambam(me;)</p>
       </footer>
@@ -69,9 +83,10 @@
 
 
 <script>
-import Header from "../components/Header.vue";
+import Skills from "../components/Skills.vue";
+import Bruh from "../components/Content-R.vue";
 export default {
-  components: { Header },
+  components: { Skills, Bruh },
   metaInfo: {
     title: "Home",
   },
@@ -159,7 +174,6 @@ img {
 header {
   top: -32px;
   position: relative;
-  margin-bottom: 100px;
   background-color: $champangepink;
   background-repeat: no-repeat;
   background-size: cover;

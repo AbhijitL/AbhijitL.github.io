@@ -5,8 +5,10 @@
     <div class="header-right">
       <!-- <g-link to="/">Home</g-link> -->
       <g-link to="/art">Art</g-link>
+      <g-link to="/apps">Apps</g-link>
+      <g-link to="/games">Games</g-link>
       <g-link to="/blog">Blog</g-link>
-      <g-link to="/about">About</g-link>
+      <g-link to="/about">Contact</g-link>
     </div>
   </div>
 </template>
