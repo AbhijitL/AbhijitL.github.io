@@ -28,18 +28,32 @@
           <div class="container text-center">
             <div class="row">
               <div class="col">
-                <card title="Game Dev"></card>
+                <card
+                  title="Game Dev"
+                  :img_src="require('@/assets/images/games/ue4.jpg')"
+                >
+                  ></card
+                >
               </div>
               <div class="col">
-                <card title="Mobile Dev"></card>
+                <card
+                  title="Mobile Dev"
+                  :img_src="require('@/assets/images/apps/LMM2.png')"
+                ></card>
               </div>
             </div>
             <div class="row">
               <div class="col">
-                <card title="3D Modelling"></card>
+                <card
+                  title="3D Modelling"
+                  :img_src="require('@/assets/images/models/ruins.jpg')"
+                ></card>
               </div>
               <div class="col">
-                <card title="Web Dev"></card>
+                <card
+                  title="Embedded Systems"
+                  :img_src="require('@/assets/images/games/ue4.jpg')"
+                ></card>
               </div>
             </div>
           </div>

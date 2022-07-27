@@ -3,14 +3,14 @@
     <div class="row g-0">
       <div class="col-md-4">
         <g-image
-          src="~/assets/images/pro.png"
+          v-bind:src="img_src"
           class="img-fluid rounded-start"
           alt="..."
         />
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">{{ title }}</h5>
+          <h4 class="card-title">{{ title }}</h4>
         </div>
       </div>
     </div>
@@ -19,7 +19,10 @@
 
 <script>
 export default {
-  props: ["title"],
+  props: {
+    title: String,
+    img_src: String,
+  },
 };
 </script>
 
