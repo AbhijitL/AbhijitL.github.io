@@ -27,14 +27,20 @@
           <h2>What I Do</h2>
           <div class="container text-center">
             <div class="row">
-              <div class="col">Column</div>
-              <div class="col">Column</div>
-              <div class="col">Column</div>
+              <div class="col">
+                <card title="Game Dev"></card>
+              </div>
+              <div class="col">
+                <card title="Mobile Dev"></card>
+              </div>
             </div>
             <div class="row">
-              <div class="col">Column</div>
-              <div class="col">Column</div>
-              <div class="col">Column</div>
+              <div class="col">
+                <card title="3D Modelling"></card>
+              </div>
+              <div class="col">
+                <card title="Web Dev"></card>
+              </div>
             </div>
           </div>
 
@@ -98,7 +104,12 @@
 </template>
 
 <script>
+import Card from "@/components/Card.vue";
+
 export default {
+  components: {
+    Card,
+  },
   metaInfo() {
     return {
       title: "Home",
