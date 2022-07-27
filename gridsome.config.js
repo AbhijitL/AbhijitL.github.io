@@ -4,58 +4,28 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-
-const path = require('path')
-
-function addStyleResource(rule) {
-  rule.use('style-resource')
-    .loader('style-resources-loader')
-    .options({
-      patterns: [
-
-        path.resolve(__dirname, './src/assets/img/Sass/*.scss'),
-      ],
-    })
-}
-
 module.exports = {
-  siteName: 'Abhijitl',
-  siteUrl: "https://abhijitl.me/",
+  siteName: 'Gridsome Neumorphic',
+  siteDescription: "Gridsome Neumorphic is a blog starter created by Brad Siefert.",
+  siteUrl: 'https://gridsome-neumorphic.netlify.app',
+  titleTemplate: `Gridsome Neumorphic / %s`,
+  icon: 'src/favicon.png',
   plugins: [
+    {
+      use: '@gridsome/plugin-sitemap',
+    },
     {
       use: '@gridsome/source-filesystem',
       options: {
-        typeName: 'Post',
-        path: './blog/posts/*.md',
-        // remark: {
-        //   plugins: [
-        //     '@gridsome/remark-prismjs',
-
-        //   ]
-        // }
+        typeName: 'Blog',
+        path: './content/blog/**/*.md',
       }
     }
   ],
-
-  transformers: {
-    remark: {
-      plugins: [
-        ['@gridsome/remark-prismjs', {
-          showLineNumbers: true
-        }]
-      ]
-    }
-  },
-
   templates: {
-    Post: '/blog/:title'
-  },
-  chainWebpack(config) {
-    // Load variables for all vue-files
-    const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
-
-    types.forEach(type => {
-      addStyleResource(config.module.rule('scss').oneOf(type))
-    })
+    Blog: [{
+      path: '/blog/:title',
+      component: './src/templates/BlogPost.vue'
+    }]
   }
 }

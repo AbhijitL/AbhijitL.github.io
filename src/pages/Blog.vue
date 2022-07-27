@@ -1,80 +1,71 @@
 <template>
   <Layout>
-    <Main class="blog" style="text-align: center">
-      <div class="container">
-        <div class="columns is-vcentered">
-          <div class="column">
-            <div class="column">
-              <div class="column">
-                <h1>Blog Posts</h1>
+    <div class="container skinny-contain">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+
+          <h1>Blog</h1>
+          <p>A blog about Jamstack, Gridsome and other things I can't stop thinking about.</p>
+
+          <div v-for="entry in $page.allBlog.edges" :key="entry.node.id">
+            <div class="box">
+              <div class="posts flex flex-wrap">
+                <article>
+                  <g-link :to="entry.node.path">
+                    <figure>
+                      <g-image class="img-fluid" :src="entry.node.cover_image" :alt="entry.node.title"/>
+                    </figure>
+                  </g-link>
+
+                  <p class="blog-details">
+                    <time :datetime="entry.node.datetime">{{ entry.node.humanTime }}</time>
+                  </p>
+
+                  <g-link :to="entry.node.path">
+                    <h2 class="h1">{{ entry.node.title }}</h2>
+                  </g-link>
+
+                  <p>{{ entry.node.description }}</p>
+
+                  <g-link class="btn btn-outline-dark" :to="entry.node.path">
+                    Read Post &nbsp;➡️
+                  </g-link>
+
+                </article>
               </div>
             </div>
-            <div class="column">
-              <nav>
-                <div
-                  class="box"
-                  v-for="post in $page.allPost.edges"
-                  v-bind:key="post.node.id"
-                  :to="post.node.path"
-                >
-                  <div class="columns is-vcentered">
-                    <div class="column is-one-third">
-                      <g-image
-                        :src="post.node.thumbnail"
-                        style="width: 10rem"
-                      />
-                    </div>
-                    <div class="column">
-                      <g-link v-bind:key="post.node.id" :to="post.node.path">
-                        <h2>
-                          {{ post.node.title }} on {{ post.node.date }}
-                        </h2></g-link
-                      >
-                    </div>
-                  </div>
-                </div>
-              </nav>
-            </div>
           </div>
+
         </div>
       </div>
-    </Main>
+    </div>
   </Layout>
 </template>
 
+<script>
+export default {
+  metaInfo() {
+    return {
+      title: "Blog"
+    };
+  }
+};
+</script>
+
 <page-query>
-query{
-    allPost{
-        totalCount
-        edges{
-            node{
-                id
-                title
-                author
-                thumbnail
-                date (format: "D, MMMM, YYYY")
-                content
-                timeToRead
-                path
-            }
+  query {
+    allBlog {  
+      edges {
+        node {
+          title
+          path
+          description
+          cover_image(width:960)
+          humanTime : date(format:"YYYY-MM-DD")
+          datetime : date(format:"ddd MMM DD YYYY hh:mm:ss zZ")
         }
+      }
     }
-}
+  }
 </page-query>
 
-<style lang = "scss">
-.blog {
-  nav a {
-    display: block;
-    color: $darkliver;
-  }
-}
-
-h1 {
-  font-size: 44px;
-}
-
-h2 {
-  font-size: 23px;
-}
-</style>

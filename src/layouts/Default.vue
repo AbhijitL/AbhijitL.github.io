@@ -1,19 +1,48 @@
 <template>
-  <div class="layout">
-    <Header />
-    <slot />
+  <div id="app">
+    <header>
+      <Navbar />
+    </header>
+
+    <main>
+      <SearchBar />
+        
+      <transition name="fade" appear>
+        <slot/>
+      </transition>
+    </main>
+
+    <Footer />
   </div>
 </template>
 
+<static-query>
+query {
+  metadata {
+    siteName,
+    siteUrl
+  }
+}
+</static-query>
+
 <script>
-import Header from "../components/Header.vue";
+import SearchBar from '@/components/SearchBar.vue'
+import Navbar from '@/components/Navbar.vue'
+import Footer from '@/components/Footer.vue'
+
 export default {
   components: {
-    Header,
-  },
-};
+    Navbar, Footer, SearchBar
+  }
+}
 </script>
 
+<style lang="scss">
+.fade-enter-active {
+  transition: opacity .5s;
+}
 
-<style>
+.fade-enter {
+  opacity: 0;
+}
 </style>
