@@ -10,6 +10,7 @@ import '../src/styles.scss'
 import 'prismjs/themes/prism-tomorrow.css'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 
+import "~/assets/img/Sass/styles.css";
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component

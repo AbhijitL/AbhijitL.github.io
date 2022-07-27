@@ -2,7 +2,20 @@
   <Layout>
     <div class="main-body">
       <header></header>
-      <body></body>
+      <body>
+        <main>
+          <div class="columns">
+            <div class="column">
+              <aside-info></aside-info>
+            </div>
+            <div class="column">
+              <div class="nes-container is-rounded is-dark">
+                <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+              </div>
+            </div>
+          </div>
+        </main>
+      </body>
       <footer>
         <p>Made by Abhijit Leihaorambam(me;)</p>
       </footer>
@@ -14,9 +27,9 @@
 
 <script>
 import Skills from "../components/Skills.vue";
-import Bruh from "../components/Content-R.vue";
+import AsideInfo from "../components/Content-R.vue";
 export default {
-  components: { Skills, Bruh },
+  components: { Skills, AsideInfo },
   metaInfo: {
     title: "Home",
   },

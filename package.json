@@ -12,6 +12,7 @@
     "@gridsome/transformer-remark": "^0.6.4",
     "buefy": "^0.9.11",
     "gridsome": "^0.7.0",
+    "nes.css": "^2.3.0",
     "vue-disqus": "^4.0.1"
   },
   "devDependencies": {
