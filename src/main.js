@@ -19,7 +19,14 @@ export default function (Vue, { router, head, isClient }) {
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap'
   })
-
+  head.link.push({
+    rel: 'stylesheet',
+    href: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+  })
+  head.link.push({
+    rel: 'stylesheet',
+    href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css"
+  })
   Vue.use(VueFuse)
 
   // Set default layout as a global component

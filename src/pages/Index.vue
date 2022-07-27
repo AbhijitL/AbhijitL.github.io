@@ -9,13 +9,28 @@
                 <h1 class="display-1 mt-32">
                   Hi,👋I'm Abhijit Leihaorambam<br /><br />
                 </h1>
+                <ul>
+                  <li>_3DModeler</li>
+                  <li>_Programmer</li>
+                </ul>
+                <div class="row">
+                  <div class="col">
+                    <i class="fa-brands fa-instagram"></i>
+                  </div>
+                  <div class="col">
+                    <i class="fa-brands fa-artstation"></i>
+                  </div>
+                  <div class="col">
+                    <i class="fa-brands fa-twitter"></i>
+                  </div>
+                </div>
               </div>
               <div class="col">
                 <figure>
                   <g-image
                     class="my_img"
                     src="~/assets/images/pro.png"
-                    width="200"
+                    width="250"
                   ></g-image>
                   <figcaption>It's me!!</figcaption>
                 </figure>
@@ -53,8 +68,8 @@
 
           <hr class="my-4" />
 
-          <h3>Development Notes</h3>
-
+          <h2>Technology I use:</h2>
+          <skills></skills>
           <h4 class="mt-4">Bootstrap v5</h4>
           <p>
             I wanted to test out
@@ -112,10 +127,12 @@
 
 <script>
 import Card from "@/components/Card.vue";
+import Skills from "@/components/SkillsCard.vue";
 
 export default {
   components: {
     Card,
+    Skills,
   },
   metaInfo() {
     return {
@@ -125,10 +142,17 @@ export default {
 };
 </script>
 
+
 <style>
 .col {
   align-self: center;
 }
+
+.card {
+  padding: 10px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 .my_img {
   box-shadow: 1px 2px 30px rgba(0, 0, 0, 0.3);
 }

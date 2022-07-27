@@ -78,7 +78,7 @@ export default {
 .navbar .navbar-nav .nav-link {
   text-align: center;
   padding: 0.5rem 0;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .navbar-collapse {
@@ -112,7 +112,7 @@ export default {
   }
 
   .navbar-brand {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     line-height: 1.2;
     padding-bottom: 0.5rem;
     margin-right: 4px;
