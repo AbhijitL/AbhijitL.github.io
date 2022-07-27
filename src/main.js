@@ -6,13 +6,12 @@ import Vue from 'vue'
 import VueDisqus from 'vue-disqus'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
-import DefaultLayout from '~/layouts/Default.vue'
 import '../src/styles.scss'
 import 'prismjs/themes/prism-tomorrow.css'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 
 
-export default function (Vue, { router, head, isClient }) {
+export default function (Vue, { appOptions, router, head, isClient }) {
   // Set default layout as a global component
   head.link.push({
     rel: 'stylesheet',
@@ -25,6 +24,7 @@ export default function (Vue, { router, head, isClient }) {
   });
 
   const opts = {};
+
 
   Vue.use(Vuetify)
   Vue.use(VueDisqus)

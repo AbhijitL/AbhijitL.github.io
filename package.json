@@ -19,6 +19,7 @@
     "@iconify/vue": "^3.0.0",
     "sass": "^1.43.4",
     "sass-loader": "^10.1.1",
-    "style-resources-loader": "^1.4.1"
+    "style-resources-loader": "^1.4.1",
+    "webpack-node-externals": "^3.0.0"
   }
 }

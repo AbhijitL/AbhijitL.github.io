@@ -1,15 +1,10 @@
 <template>
-  <Layout>
-    <div class="main-body">
-      <header></header>
-      <body>
-        <main></main>
-      </body>
-      <footer>
-        <p>Made by Abhijit Leihaorambam(me;)</p>
-      </footer>
-    </div>
-  </Layout>
+  <v-app>
+    <!-- Must have the app property -->
+    <v-app-bar app></v-app-bar>
+
+    <v-main> Hello World </v-main>
+  </v-app>
 </template>
 
 
