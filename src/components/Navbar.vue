@@ -64,7 +64,7 @@ export default {
 }
 
 .navbar-brand {
-  font-family: "Merriweather";
+  font-family: "IBM Plex Mono";
   font-weight: 700;
   font-size: 1.125rem;
   padding-top: 8px;
