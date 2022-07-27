@@ -1,21 +1,31 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light">
     <h1 class="navbar-brand">
-      <g-link to="/">
-        Neumorphic
-      </g-link>
+      <g-link to="/"> Home </g-link>
     </h1>
 
-    <button 
-      class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" 
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbar"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
       @click="showNav = !showNav"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="navbar-collapse collapse justify-content-stretch" id="navbar" :class="{ 'show': showNav } ">
+    <div
+      class="navbar-collapse collapse justify-content-stretch"
+      id="navbar"
+      :class="{ show: showNav }"
+    >
       <ul class="navbar-nav">
+        <li class="nav-item">
+          <g-link class="nav-link" rel="noopener" to="/art">Art</g-link>
+        </li>
         <li class="nav-item">
           <g-link class="nav-link" rel="noopener" to="/blog">Blog</g-link>
         </li>
@@ -32,21 +42,23 @@
 
 <script>
 export default {
-  name: 'Navbar',
+  name: "Navbar",
   data: () => ({
     showNav: false, // This is to make the navbar open/close on mobile.
-  })
-}
+  }),
+};
 </script>
 
 <style lang="scss">
 @import "@/assets/scss/variables.scss";
 
 // Navbar
-.navbar, .search-bar .form-control, .search-bar-results {
-  background: #FFFFFF;
-  border: 1px solid #EAEAEA;
-  box-shadow: 0 0 32px 0 rgba(0,0,0,0.08);
+.navbar,
+.search-bar .form-control,
+.search-bar-results {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.08);
   color: $black;
   border-radius: 0;
 }
@@ -77,7 +89,7 @@ export default {
   .navbar {
     position: fixed;
     top: 64px;
-    left: 0;
+    left: 30px;
     min-width: 192px;
     padding: 2rem;
     display: flex;
@@ -102,7 +114,7 @@ export default {
   .navbar-brand {
     font-size: 1.25rem;
     line-height: 1.2;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
     margin-right: 4px;
     padding-top: 4px;
   }

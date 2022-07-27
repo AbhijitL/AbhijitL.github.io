@@ -3,12 +3,8 @@
     <div class="container skinny-contain">
       <div class="row">
         <div class="col-12">
-          <h5>Credits</h5>
           <p class="mb-0">
-            Powered by <a target="_blank" rel="noopener" title="Link to Gridsome" href="https://gridsome.org">Gridsome</a>, 
-            <a target="_blank" rel="noopener" title="Link to Bootstrap" href="https://getbootstrap.com">Bootstrap</a>,
-            <a target="_blank" rel="noopener" title="Link to Netlify" href="https://netlify.com">Netlify</a>.
-            Images & thoughts &copy; {{ new Date().getFullYear() }} Gridsome Neumorphic.
+            Abhijit Leihaorambam &copy; {{ new Date().getFullYear() }}.
           </p>
         </div>
       </div>
@@ -18,21 +14,22 @@
 
 <script>
 export default {
-  name: 'Footer'
-}
+  name: "Footer",
+};
 </script>
 
 <style lang="scss">
-  @import "@/assets/scss/variables.scss";
+@import "@/assets/scss/variables.scss";
 
-  /* ---------- Footer --------- */
-  footer {
-    margin-top: 128px;
-    padding-top: 1.5rem;
-    padding-bottom: 2rem;
-    font-size: .875rem;
-    letter-spacing: 0;
-    line-height: 1.4;
-    border-top: 1px solid $gray-200;
-  }
+/* ---------- Footer --------- */
+footer {
+  margin-top: 128px;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  line-height: 1.4;
+  border-top: 1px solid $gray-200;
+  text-align: center;
+}
 </style>

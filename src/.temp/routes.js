@@ -1,10 +1,10 @@
-const c1 = () => import(/* webpackChunkName: "page--src--templates--blog-post-vue" */ "/Users/bksiefert/Sites/personal/gridsome-neumorphic-starter/src/templates/BlogPost.vue")
-const c2 = () => import(/* webpackChunkName: "page--src--pages--success-vue" */ "/Users/bksiefert/Sites/personal/gridsome-neumorphic-starter/src/pages/Success.vue")
-const c3 = () => import(/* webpackChunkName: "page--src--pages--contact-vue" */ "/Users/bksiefert/Sites/personal/gridsome-neumorphic-starter/src/pages/Contact.vue")
-const c4 = () => import(/* webpackChunkName: "page--src--pages--blog-vue" */ "/Users/bksiefert/Sites/personal/gridsome-neumorphic-starter/src/pages/Blog.vue")
-const c5 = () => import(/* webpackChunkName: "page--src--pages--about-vue" */ "/Users/bksiefert/Sites/personal/gridsome-neumorphic-starter/src/pages/About.vue")
-const c6 = () => import(/* webpackChunkName: "page--src--pages--404-vue" */ "/Users/bksiefert/Sites/personal/gridsome-neumorphic-starter/src/pages/404.vue")
-const c7 = () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/bksiefert/Sites/personal/gridsome-neumorphic-starter/src/pages/Index.vue")
+const c1 = () => import(/* webpackChunkName: "page--src-templates-blog-post-vue" */ "D:\\Web\\MySite_abhijitl.github.io\\AbhijitL.github.io\\src\\templates\\BlogPost.vue")
+const c2 = () => import(/* webpackChunkName: "page--src-pages-success-vue" */ "D:\\Web\\MySite_abhijitl.github.io\\AbhijitL.github.io\\src\\pages\\Success.vue")
+const c3 = () => import(/* webpackChunkName: "page--src-pages-contact-vue" */ "D:\\Web\\MySite_abhijitl.github.io\\AbhijitL.github.io\\src\\pages\\Contact.vue")
+const c4 = () => import(/* webpackChunkName: "page--src-pages-blog-vue" */ "D:\\Web\\MySite_abhijitl.github.io\\AbhijitL.github.io\\src\\pages\\Blog.vue")
+const c5 = () => import(/* webpackChunkName: "page--src-pages-about-vue" */ "D:\\Web\\MySite_abhijitl.github.io\\AbhijitL.github.io\\src\\pages\\About.vue")
+const c6 = () => import(/* webpackChunkName: "page--src-pages-404-vue" */ "D:\\Web\\MySite_abhijitl.github.io\\AbhijitL.github.io\\src\\pages\\404.vue")
+const c7 = () => import(/* webpackChunkName: "page--src-pages-index-vue" */ "D:\\Web\\MySite_abhijitl.github.io\\AbhijitL.github.io\\src\\pages\\Index.vue")
 
 export default [
   {

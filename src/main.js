@@ -19,12 +19,12 @@ export default function (Vue, { router, head, isClient }) {
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,900;1,900&family=Inter:wght@400;700&display=swap'
   })
-  
+
   Vue.use(VueFuse)
 
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
-  
+
   // Import FontAwesome
   Vue.component('font-awesome', FontAwesomeIcon)
 }
