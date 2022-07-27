@@ -27,35 +27,28 @@
           <h2>What I Do</h2>
           <div class="container text-center">
             <div class="row">
-              <div class="col">
-                <card
-                  title="Game Dev"
-                  :img_src="require('@/assets/images/games/ue4.jpg')"
-                >
-                  ></card
-                >
-              </div>
-              <div class="col">
-                <card
-                  title="Mobile Dev"
-                  :img_src="require('@/assets/images/apps/LMM2.png')"
-                ></card>
-              </div>
+              <card
+                title="Game Dev"
+                text="Gamedev was the reason I started learning programing."
+                :img_src="require('@/assets/images/games/ue4.jpg')"
+                >></card
+              >
+              <card
+                title="3D Modelling"
+                text="I have Been doing 3d Modelliing since age 14."
+                :img_src="require('@/assets/images/models/ruins.jpg')"
+              ></card>
+              <card
+                title="Mobile Dev"
+                text="I have been doing mobile dev since flutter beta release."
+                :img_src="require('@/assets/images/apps/LMM2.png')"
+              ></card>
             </div>
-            <div class="row">
-              <div class="col">
-                <card
-                  title="3D Modelling"
-                  :img_src="require('@/assets/images/models/ruins.jpg')"
-                ></card>
-              </div>
-              <div class="col">
-                <card
-                  title="Embedded Systems"
-                  :img_src="require('@/assets/images/games/ue4.jpg')"
-                ></card>
-              </div>
-            </div>
+            <card
+              title="Embedded Systems"
+              text="Arduino uno was my first micro controller i owned at age 15"
+              :img_src="require('@/assets/images/embedded/1.jpg')"
+            ></card>
           </div>
 
           <hr class="my-4" />

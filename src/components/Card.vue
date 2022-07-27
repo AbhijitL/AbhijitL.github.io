@@ -1,5 +1,5 @@
 <template>
-  <div class="card mb-3" style="max-width: 540px">
+  <div class="card mb-3" style="max-width: 1000px">
     <div class="row g-0">
       <div class="col-md-4">
         <g-image
@@ -11,6 +11,7 @@
       <div class="col-md-8">
         <div class="card-body">
           <h4 class="card-title">{{ title }}</h4>
+          <p class="card-text">{{ text }}</p>
         </div>
       </div>
     </div>
@@ -21,6 +22,7 @@
 export default {
   props: {
     title: String,
+    text: String,
     img_src: String,
   },
 };

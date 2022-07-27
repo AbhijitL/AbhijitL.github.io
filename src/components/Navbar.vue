@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light">
     <h1 class="navbar-brand">
-      <g-link to="/"> Home </g-link>
+      <g-link to="/"> AbhijitL </g-link>
     </h1>
 
     <button
