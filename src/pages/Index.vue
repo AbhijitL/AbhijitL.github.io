@@ -3,18 +3,7 @@
     <div class="main-body">
       <header></header>
       <body>
-        <main>
-          <div class="columns">
-            <div class="column">
-              <aside-info></aside-info>
-            </div>
-            <div class="column">
-              <div class="nes-container is-rounded is-dark">
-                <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
-              </div>
-            </div>
-          </div>
-        </main>
+        <main></main>
       </body>
       <footer>
         <p>Made by Abhijit Leihaorambam(me;)</p>

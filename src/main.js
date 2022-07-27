@@ -4,24 +4,32 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import Vue from 'vue'
 import VueDisqus from 'vue-disqus'
-import Buefy from 'buefy'
-import 'buefy/dist/buefy.css'
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+import DefaultLayout from '~/layouts/Default.vue'
 import '../src/styles.scss'
 import 'prismjs/themes/prism-tomorrow.css'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 
-import "~/assets/img/Sass/styles.css";
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   head.link.push({
     rel: 'stylesheet',
-    href: 'https://use.fontawesome.com/releases/v5.2.0/css/all.css'
+    href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css',
   })
 
-  Vue.component('Layout', DefaultLayout)
-  Vue.use(Buefy, {
-    defaultIconPack: 'fas' // Font Awesome Solid
-  })
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900',
+  });
+
+  const opts = {};
+
+  Vue.use(Vuetify)
   Vue.use(VueDisqus)
+  appOptions.vuetify = new Vuetify(opts);
+
+  // Set default layout as a global component
+  Vue.component('Layout', DefaultLayout)
 }
