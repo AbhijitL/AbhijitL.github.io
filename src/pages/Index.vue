@@ -18,32 +18,45 @@
                     <a
                       href="https://www.instagram.com/labhijits/"
                       target="_blank"
+                      title="Instagram"
                     >
                       <i class="fa-brands fa-instagram fa-2x"></i>
                     </a>
                   </div>
                   <div class="col">
                     <a
-                      href="https://www.instagram.com/labhijits/"
+                      href="https://www.artstation.com/labhijits"
                       target="_blank"
+                      title="Artstation"
                     >
                       <i class="fa-brands fa-artstation fa-2x"></i>
                     </a>
                   </div>
                   <div class="col">
                     <a
-                      href="https://www.instagram.com/labhijits/"
+                      href="https://twitter.com/leihaorambam"
                       target="_blank"
+                      title="Twitter"
                     >
                       <i class="fa-brands fa-twitter fa-2x"></i>
                     </a>
                   </div>
                   <div class="col">
                     <a
-                      href="https://www.instagram.com/labhijits/"
+                      href="https://github.com/AbhijitL"
                       target="_blank"
+                      title="Github"
                     >
                       <i class="fa-brands fa-github fa-2x"></i>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a
+                      href="https://www.youtube.com/channel/UC3MOEDdCSSyfCvmUrtln0Cg"
+                      target="_blank"
+                      title="Youtube"
+                    >
+                      <i class="fa-brands fa-youtube fa-2x"></i>
                     </a>
                   </div>
                 </div>
@@ -55,7 +68,7 @@
                     src="~/assets/images/pro.png"
                     width="250"
                   ></g-image>
-                  <figcaption>It's me!!</figcaption>
+                  <figcaption class="figcaption">It's me!!</figcaption>
                 </figure>
               </div>
             </div>
@@ -177,6 +190,11 @@ export default {
 <style>
 .col {
   align-self: center;
+  padding: 5px;
+}
+
+.figcaption {
+  padding-top: 5px;
 }
 
 .card {
@@ -186,6 +204,7 @@ export default {
 
 .my_img {
   box-shadow: 1px 2px 30px rgba(0, 0, 0, 0.3);
+  padding: 5px;
 }
 
 ul li {
