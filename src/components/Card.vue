@@ -12,6 +12,7 @@
         <div class="card-body">
           <h4 class="card-title">{{ title }}</h4>
           <p class="card-text">{{ text }}</p>
+          <g-link class="nav-link" rel="noopener" to="/art">See more</g-link>
         </div>
       </div>
     </div>
@@ -30,6 +31,14 @@ export default {
 
 <style scoped>
 .col-md-8 {
+  align-self: center;
+}
+
+.card-text {
+  text-align: justify;
+}
+
+.col-md-4 {
   align-self: center;
 }
 </style>

@@ -13,6 +13,8 @@ html *{
   font-family: 'IBM Plex Mono', monospace;
 }
 
+i *
+
 body {
   background-color: $white;
   display: flex;
@@ -140,7 +142,8 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-weight: 700;
+  font-family: "IBM Plex Mono";
+  font-weight: 600;
   font-size: 1.6rem;
   letter-spacing: -0.1px;
   line-height: 1.3;

@@ -34,4 +34,4 @@ export default function (Vue, { router, head, isClient }) {
 
   // Import FontAwesome
   Vue.component('font-awesome', FontAwesomeIcon)
-}
+} 7

@@ -15,13 +15,36 @@
                 </ul>
                 <div class="row">
                   <div class="col">
-                    <i class="fa-brands fa-instagram"></i>
+                    <a
+                      href="https://www.instagram.com/labhijits/"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-instagram fa-2x"></i>
+                    </a>
                   </div>
                   <div class="col">
-                    <i class="fa-brands fa-artstation"></i>
+                    <a
+                      href="https://www.instagram.com/labhijits/"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-artstation fa-2x"></i>
+                    </a>
                   </div>
                   <div class="col">
-                    <i class="fa-brands fa-twitter"></i>
+                    <a
+                      href="https://www.instagram.com/labhijits/"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-twitter fa-2x"></i>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a
+                      href="https://www.instagram.com/labhijits/"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-github fa-2x"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -44,14 +67,14 @@
             <div class="row">
               <card
                 title="Game Dev"
-                text="Gamedev was the reason I started learning programing."
+                text="Gamedev was the reason I started learning programming.And I do occasionally participate in game jams"
                 :img_src="require('@/assets/images/games/ue4.jpg')"
                 >></card
               >
               <card
                 title="3D Modelling"
                 text="I have Been doing 3d Modelliing since age 14."
-                :img_src="require('@/assets/images/models/ruins.jpg')"
+                :img_src="require('@/assets/images/models/13_c.png')"
               ></card>
               <card
                 title="Mobile Dev"
@@ -71,53 +94,6 @@
           <h2>Technology I use:</h2>
           <skills></skills>
           <h4 class="mt-4">Bootstrap v5</h4>
-          <p>
-            I wanted to test out
-            <a target="_blank" href="https://v5.getbootstrap.com"
-              >v5 of Bootstrap</a
-            >, so I used it on this site. This is using
-            <code>Bootstrap v5.0.0-beta1</code> so you should likely update it
-            whenever there are new versions available. There are likely to be
-            bugs I don't know about.
-          </p>
-
-          <h4 class="mt-4">Search</h4>
-          <p>
-            I added search to the site using
-            <a target="_blank" href="https://www.npmjs.com/package/vue-fuse"
-              ><code>vue-fuse</code></a
-            >
-            based on this
-            <a href="https://www.youtube.com/watch?v=6i8D8j5Gkk8"
-              >wonderful tutorial</a
-            >. I added code into the <code>gridsome.server.js</code> file that
-            on build creates a JSON file of the current blog posts. To update
-            that JSON file with new posts you run <code>gridsome build</code>.
-          </p>
-
-          <h4 class="mt-4">Skinny Responsive Containers</h4>
-          <p>
-            I made 2 custom containers for the site. The containers have an
-            extra 32px gutter on the outside to match my custom grid spacing.
-            They have media queries to make them responsive on all screen sizes.
-          </p>
-
-          <ul>
-            <li>
-              <strong>skinny-contain</strong> has a max width of
-              <code>672px wide</code> (640px of content space)
-            </li>
-            <li>
-              <strong>slim-contain</strong> has a max width of
-              <code>992px wide</code> (960px of content space)
-            </li>
-          </ul>
-
-          <h4 class="mt-4">Dark Mode</h4>
-          <p>
-            I've added css classes that properly style the site for devices that
-            use dark mode.
-          </p>
           <hr class="my-4" />
         </div>
       </div>
@@ -155,5 +131,9 @@ export default {
 
 .my_img {
   box-shadow: 1px 2px 30px rgba(0, 0, 0, 0.3);
+}
+
+ul li {
+  list-style: none;
 }
 </style>
