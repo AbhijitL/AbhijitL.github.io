@@ -1,10 +1,13 @@
 {
   "name": "AbhijitL",
   "private": true,
+  
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
@@ -15,6 +18,7 @@
     "@gridsome/transformer-remark": "^0.5.0",
     "axios": "^0.21.4",
     "bootstrap": "^5.0.0-beta1",
+    "gh-pages": "^4.0.0",
     "gridsome": "^0.7.23",
     "gridsome-source-static-meta": "^1.0.1",
     "lodash.pick": "^4.4.0",
