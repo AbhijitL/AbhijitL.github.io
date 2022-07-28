@@ -10,7 +10,7 @@
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h4 class="card-title">{{ title }}</h4>
+          <h3 class="card-title">{{ title }}</h3>
           <p class="card-text">{{ text }}</p>
           <g-link class="nav-link" rel="noopener" to="/art">See more</g-link>
         </div>
