@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout id="app">
     <div class="container skinny-contain">
       <div class="row">
         <div class="col-lg-12">
@@ -93,7 +93,16 @@
 
           <h2>Technology I use:</h2>
           <skills></skills>
-          <h4 class="mt-4">Bootstrap v5</h4>
+          <h2 class="mt-4">My Project Repository</h2>
+          <div class="container" v-if="initialLoaded">
+            <repocard
+              v-for="repo in repoInfo"
+              v-bind:key="repo.name"
+              :repoName="repo.name"
+              :repoDescription="repo.description"
+              @selected="openRep"
+            />
+          </div>
           <hr class="my-4" />
         </div>
       </div>
@@ -102,18 +111,64 @@
 </template>
 
 <script>
+import axios from "axios";
+import Repocard from "@/components/RepoCard";
 import Card from "@/components/Card.vue";
 import Skills from "@/components/SkillsCard.vue";
+const baseGithubApi = "https://api.github.com/users";
+const githubApiParams = "repos?sort=created&direction=desc&per_page=30";
 
 export default {
+  name: "App",
+  data() {
+    return {
+      user: "AbhijitL", // github username
+      initialLoaded: false,
+      repoInfo: [],
+      page: 1,
+    };
+  },
   components: {
     Card,
     Skills,
+    Repocard,
   },
   metaInfo() {
     return {
       title: "Home",
     };
+  },
+  methods: {
+    getRepos: async function (user) {
+      if (user.trim() === "") return;
+      this.initialLoaded = false;
+      this.repoInfo = [];
+      this.page = 1;
+      await axios
+        .get(`${baseGithubApi}/${user}/${githubApiParams}`)
+        .then((res) =>
+          res.data.forEach((repo) => {
+            this.repoInfo.push({
+              name: repo.name,
+              language: repo.language,
+              description: repo.description,
+              starCount: repo.stargazers_count,
+              forkCount: repo.forks_count,
+              dateCreated: repo.created_at,
+            });
+          })
+        );
+      this.user = "AbhijitL";
+      this.initialLoaded = true;
+    },
+    openRep: function (repoName) {
+      let route = `https://github.com/${this.user}/${repoName}`;
+      console.log(route);
+      window.open(route);
+    },
+  },
+  mounted: function () {
+    this.getRepos("AbhijitL");
   },
 };
 </script>
