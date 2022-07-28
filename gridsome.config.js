@@ -7,7 +7,7 @@
 module.exports = {
   siteName: 'AbhijitL',
   siteUrl: 'https://abhijitl.me',
-  icon: 'src/favicon.png',
+  icon: 'src/assets/images/favicon/favicon.jpg',
   plugins: [
     {
       use: '@gridsome/plugin-sitemap',
