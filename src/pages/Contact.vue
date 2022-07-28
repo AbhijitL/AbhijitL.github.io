@@ -4,64 +4,51 @@
       <div class="row">
         <div class="col">
           <h1>Say Hello</h1>
-          <p class="mb-4">Please reach out and I'll do my best to get back to you asap.</p>
-
-          <form 
-            name="Contact Form"
-            method="post"
-            action="/success/"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-          >
-            <div class="mb-3">
-              <h3 class="">
-                <label for="your-name">Name</label>
-              </h3>
-              <input 
-                type="text" 
-                name="your-name" 
-                value="" 
-                class="form-control" 
-                aria-required="true" 
-                aria-invalid="false" 
-                placeholder="Your Name" 
-              />
-            </div>
-
-            <div class="mb-3">
-              <h3 class="">
-                <label for="your-email">Email</label>
-              </h3>
-              <input 
-                type="email" 
-                name="your-email" 
-                value="" 
-                class="form-control" 
-                aria-required="true" 
-                aria-invalid="false" 
-                placeholder="name@email.com" 
-              />
-            </div>
-
-            <div class="mb-3">
-              <h3 class="">
-                <label for="your-message">Message</label>
-              </h3>
-              <textarea 
-                type="text" 
-                name="your-message" 
-                value="" 
-                class="form-control" 
-                aria-required="true" 
-                aria-invalid="false" 
-                placeholder="" 
-              />
-              </textarea>
-            </div>
-
-            <div class="mb-3">
-              <button type="submit" class="btn btn-outline-dark">Send Message&nbsp; 📤</button>
-            </div>
+          <p class="mb-4">
+            Please reach out and I'll do my best to get back to you asap.
+          </p>
+          <form>
+            <div class="mb-3"></div>
+            <label>Name</label>
+            <div class="mb-3"></div>
+            <input
+              type="text"
+              v-model="name"
+              name="name"
+              class="form-control"
+              aria-required="true"
+              aria-invalid="false"
+              placeholder="Your Name"
+            />
+            <div class="mb-3"></div>
+            <label>Email</label>
+            <div class="mb-3"></div>
+            <input
+              type="email"
+              v-model="email"
+              name="email"
+              class="form-control"
+              aria-required="true"
+              aria-invalid="false"
+              placeholder="Your Email"
+            />
+            <div class="mb-3"></div>
+            <label>Message</label>
+            <div class="mb-3"></div>
+            <textarea
+              name="message"
+              v-model="message"
+              cols="30"
+              rows="5"
+              class="form-control"
+              aria-required="true"
+              aria-invalid="false"
+              placeholder="Message"
+            >
+            </textarea>
+            <div class="mb-3"></div>
+            <input class="btn btn-outline-dark" type="submit" value="Send" />
+            <div class="mb-3"></div>
           </form>
         </div>
       </div>
@@ -70,16 +57,43 @@
 </template>
 
 <script>
+import emailjs from "emailjs-com";
+
 export default {
   metaInfo() {
     return {
-      title: 'Contact'
+      title: "Contact",
     };
   },
   data() {
     return {
-      formData: {},
-    }
-  }
+      name: "",
+      email: "",
+      message: "",
+    };
+  },
+  methods: {
+    sendEmail(e) {
+      try {
+        emailjs.sendForm(
+          "service_5xsmvlk",
+          "14_3HkyPxHqOl2eHg",
+          e.target,
+          "14_3HkyPxHqOl2eHg",
+          {
+            name: this.name,
+            email: this.email,
+            message: this.message,
+          }
+        );
+      } catch (error) {
+        console.log({ error });
+      }
+      // Reset form field
+      this.name = "";
+      this.email = "";
+      this.message = "";
+    },
+  },
 };
 </script>
