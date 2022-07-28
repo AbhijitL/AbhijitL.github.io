@@ -11,3 +11,4 @@ node_modules
 /src/.DS_Store
 /src/assets/scss/.DS_Store
 /content/images/.DS_Store
+/src/.temp
