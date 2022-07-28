@@ -4,7 +4,8 @@
       <div class="row">
         <div class="col-12">
           <p class="mb-0">
-            Abhijit Leihaorambam &copy; {{ new Date().getFullYear() }}.
+            Made with ♥ by Abhijit Leihaorambam &copy;
+            {{ new Date().getFullYear() }}.
           </p>
         </div>
       </div>
@@ -23,7 +24,7 @@ export default {
 
 /* ---------- Footer --------- */
 footer {
-  margin-top: 128px;
+  // margin-top: 128px;
   padding-top: 1.5rem;
   padding-bottom: 2rem;
   font-size: 0.875rem;
