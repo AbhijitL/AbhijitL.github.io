@@ -5,7 +5,7 @@
         <div class="col-12">
           <p class="mb-0">
             Made with ♥ by Abhijit Leihaorambam &copy;
-            {{ new Date().getFullYear() }}.
+            {{ new Date().getFullYear() }}. Contact: labhijitsingh13@gmail.com
           </p>
         </div>
       </div>
