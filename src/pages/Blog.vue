@@ -3,9 +3,8 @@
     <div class="container skinny-contain">
       <div class="row justify-content-center">
         <div class="col-lg-12">
-
           <h1>Blog</h1>
-          <p>A blog about Jamstack, Gridsome and other things I can't stop thinking about.</p>
+          <p>A blog about programming,3d modelling,life,reviews and more</p>
 
           <div v-for="entry in $page.allBlog.edges" :key="entry.node.id">
             <div class="box">
@@ -13,12 +12,18 @@
                 <article>
                   <g-link :to="entry.node.path">
                     <figure>
-                      <g-image class="img-fluid" :src="entry.node.cover_image" :alt="entry.node.title"/>
+                      <g-image
+                        class="img-fluid"
+                        :src="entry.node.cover_image"
+                        :alt="entry.node.title"
+                      />
                     </figure>
                   </g-link>
 
                   <p class="blog-details">
-                    <time :datetime="entry.node.datetime">{{ entry.node.humanTime }}</time>
+                    <time :datetime="entry.node.datetime">{{
+                      entry.node.humanTime
+                    }}</time>
                   </p>
 
                   <g-link :to="entry.node.path">
@@ -30,12 +35,10 @@
                   <g-link class="btn btn-outline-dark" :to="entry.node.path">
                     Read Post &nbsp;➡️
                   </g-link>
-
                 </article>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -46,9 +49,9 @@
 export default {
   metaInfo() {
     return {
-      title: "Blog"
+      title: "Blog",
     };
-  }
+  },
 };
 </script>
 
