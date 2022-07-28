@@ -5,7 +5,7 @@
         <div class="col-lg-12">
           <h1>Blog</h1>
           <p>A blog about programming,3d modelling,life,reviews and more</p>
-
+          <hr class="my-4" />
           <div v-for="entry in $page.allBlog.edges" :key="entry.node.id">
             <div class="box">
               <div class="posts flex flex-wrap">
