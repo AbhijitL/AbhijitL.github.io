@@ -20,7 +20,7 @@
                       target="_blank"
                       title="Instagram"
                     >
-                      <i class="fa-brands fa-instagram fa-2x"></i>
+                      <a class="fa-brands fa-instagram fa-2x"></a>
                     </a>
                   </div>
                   <div class="col">
@@ -29,7 +29,7 @@
                       target="_blank"
                       title="Artstation"
                     >
-                      <i class="fa-brands fa-artstation fa-2x"></i>
+                      <a class="fa-brands fa-artstation fa-2x"></a>
                     </a>
                   </div>
                   <div class="col">
@@ -38,7 +38,7 @@
                       target="_blank"
                       title="Twitter"
                     >
-                      <i class="fa-brands fa-twitter fa-2x"></i>
+                      <a class="fa-brands fa-twitter fa-2x"></a>
                     </a>
                   </div>
                   <div class="col">
@@ -47,7 +47,7 @@
                       target="_blank"
                       title="Github"
                     >
-                      <i class="fa-brands fa-github fa-2x"></i>
+                      <a class="fa-brands fa-github fa-2x"></a>
                     </a>
                   </div>
                   <div class="col">
@@ -56,7 +56,16 @@
                       target="_blank"
                       title="Youtube"
                     >
-                      <i class="fa-brands fa-youtube fa-2x"></i>
+                      <a class="fa-brands fa-youtube fa-2x"></a>
+                    </a>
+                  </div>
+                  <div class="col">
+                    <a
+                      href="https://myanimelist.net/profile/ggloll"
+                      target="_blank"
+                      title="MyAnimeList"
+                    >
+                      <a class="fa-brands fa-maxcdn fa-2x"></a>
                     </a>
                   </div>
                 </div>
