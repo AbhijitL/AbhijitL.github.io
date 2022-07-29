@@ -77,7 +77,7 @@ export default {
       try {
         emailjs.sendForm(
           "service_5xsmvlk",
-          "14_3HkyPxHqOl2eHg",
+          "template_8q23hbb",
           e.target,
           "14_3HkyPxHqOl2eHg",
           {
