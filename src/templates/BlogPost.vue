@@ -3,7 +3,6 @@
     <div class="container skinny-contain">
       <div class="row">
         <div class="col-lg-12 blog-post">
-
           <div class="breadcrumb">
             <div class="breadcrumb-item">
               <g-link title="Link back to home" to="/">Home</g-link>
@@ -22,7 +21,9 @@
             <h1 v-html="$page.blog.title"></h1>
             <ul class="list-inline mb-32">
               <li class="list-inline-item blog-details">
-                <time :datetime="$page.blog.datetime">{{ $page.blog.humanTime }}</time>
+                <time :datetime="$page.blog.datetime">{{
+                  $page.blog.humanTime
+                }}</time>
               </li>
               <li class="list-inline-item blog-details pl-16">
                 {{ $page.blog.timeToRead }} min read
@@ -62,8 +63,27 @@ export default {
   metaInfo() {
     return {
       title: `Blog / ${this.$page.blog.title}`,
-      postTitle: 'Blog'
+      postTitle: "Blog",
     };
   },
 };
 </script>
+
+<style >
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
