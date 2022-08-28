@@ -4,7 +4,7 @@ const c3 = () => import(/* webpackChunkName: "page--src-pages-contact-vue" */ "D
 const c4 = () => import(/* webpackChunkName: "page--src-pages-blog-vue" */ "D:\\Web\\MySite_abhijitl.github.io\\AbhijitL.github.io\\src\\pages\\Blog.vue")
 const c5 = () => import(/* webpackChunkName: "page--src-pages-about-vue" */ "D:\\Web\\MySite_abhijitl.github.io\\AbhijitL.github.io\\src\\pages\\About.vue")
 const c6 = () => import(/* webpackChunkName: "page--src-pages-art-vue" */ "D:\\Web\\MySite_abhijitl.github.io\\AbhijitL.github.io\\src\\pages\\Art.vue")
-const c7 = () => import(/* webpackChunkName: "page--node-modules-gridsome-app-pages-404-vue" */ "D:\\Web\\MySite_abhijitl.github.io\\AbhijitL.github.io\\node_modules\\gridsome\\app\\pages\\404.vue")
+const c7 = () => import(/* webpackChunkName: "page--src-pages-404-vue" */ "D:\\Web\\MySite_abhijitl.github.io\\AbhijitL.github.io\\src\\pages\\404.vue")
 const c8 = () => import(/* webpackChunkName: "page--src-pages-index-vue" */ "D:\\Web\\MySite_abhijitl.github.io\\AbhijitL.github.io\\src\\pages\\Index.vue")
 
 export default [
