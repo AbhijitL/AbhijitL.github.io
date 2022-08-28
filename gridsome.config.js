@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: 'AbhijitL',
-  siteUrl: 'https://abhijitl.me',
+  siteUrl: 'https://abhijitl.github.io/',
   icon: 'src/assets/images/favicon/favicon.jpg',
   plugins: [
     {
