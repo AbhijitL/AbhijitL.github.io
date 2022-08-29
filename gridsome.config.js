@@ -25,5 +25,8 @@ module.exports = {
       path: '/blog/:title',
       component: './src/templates/BlogPost.vue'
     }]
+  },
+  configureWebpack: {
+    // merged with the internal config
   }
 }
