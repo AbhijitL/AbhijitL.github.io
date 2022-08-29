@@ -35,7 +35,7 @@ export default {
 }
 
 .card-text {
-  text-align: justify;
+  text-align: left;
 }
 
 .col-md-4 {
