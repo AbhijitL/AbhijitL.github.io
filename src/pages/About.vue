@@ -5,7 +5,6 @@
         <div class="col-lg-12 gx-3">
           <h1>Bio</h1>
         </div>
-
         <div class="col-lg-8 gx-3">
           <article class="lead">
             <p>

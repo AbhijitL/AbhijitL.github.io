@@ -17,9 +17,10 @@
             <h3>Contact me @ labhijitsingh13@gmail.com</h3>
           </div>
           <div class="row">
-            <p>Contact me @ labhijitsingh13@gmail.com</p>
+            <p>Social links:</p>
           </div>
           <social-links />
+          <hr class="my-1" />
         </div>
       </div>
     </div>
