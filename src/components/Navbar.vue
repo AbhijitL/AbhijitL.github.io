@@ -33,7 +33,7 @@
           <g-link class="nav-link" rel="noopener" to="/about">About</g-link>
         </li>
         <li class="nav-item">
-          <g-link class="nav-link" rel="noopener" to="/contact">Contact</g-link>
+          <g-link class="nav-link" rel="noopener" to="/links">Contact</g-link>
         </li>
       </ul>
     </div>

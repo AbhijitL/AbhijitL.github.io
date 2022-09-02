@@ -5,19 +5,17 @@
         <div class="col-lg-12 gx-3">
           <h1>Bio</h1>
         </div>
-
         <div class="col-lg-8 gx-3">
           <article class="lead">
             <p>
-              Hiii, I'm <strong>Abhijit Leihaorambam</strong>. I'm a Uni student
-              currently studying Computer Science and Engineering. I'm from a
-              small town in Manipur, India called Jiribam. I self taught myself
-              programming and 3d modelling when i was in middle school from
-              internet and tech megazine. I love animation which is the reason I
-              started to learn 3d modelling. I am very passionate about
-              programming when I am passionate about something I completely
-              focus on it which is one of my downside as I don't focus out of my
-              passion.
+              Hiii, I'm <strong>Abhijit Leihaorambam</strong>. I'm a Uni
+              student. I'm from a small town in Manipur, India called Jiribam. I
+              self taught myself programming and 3d modelling when i was in
+              middle school from internet and tech megazine. I love animation
+              which is the reason I started to learn 3d modelling. I am very
+              passionate about programming when I am passionate about something
+              I completely focus on it which is one of my downside as I don't
+              focus out of my passion.
             </p>
 
             <p>Just a few things about me:</p>
