@@ -83,7 +83,7 @@ export default {
   list-style: none;
 }
 .lead {
-  text-align: justify;
+  text-align: left;
   padding: 10px;
 }
 </style>
