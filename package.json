@@ -22,6 +22,7 @@
     "gridsome": "^0.7.23",
     "gridsome-source-static-meta": "^1.0.1",
     "lodash.pick": "^4.4.0",
+    "vue-disqus": "^4.0.1",
     "vue-fuse": "^2.2.1",
     "vue-gallery": "^2.0.1"
   },
