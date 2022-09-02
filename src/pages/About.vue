@@ -46,6 +46,18 @@
             alt="Pixel art of me"
           />
         </div>
+        <div class="col-lg-4">
+          <p>My playlist</p>
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/playlist/35XpJRtxy2sQrVSq5JBONb?utm_source=generator"
+            width="100%"
+            height="380"
+            frameBorder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          ></iframe>
+        </div>
       </div>
     </div>
   </Layout>
