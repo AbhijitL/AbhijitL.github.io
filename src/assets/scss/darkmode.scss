@@ -1,7 +1,7 @@
 /* ---------- Dark Mode Styles --------- */
 body[dark-mode] {
   color: $white;
-  background-color: #000;
+  background-color: #121212;
 }
 
 body[dark-mode] {
@@ -18,15 +18,15 @@ body[dark-mode] {
   }
   
   .navbar {
-    background-color: $black;
-    box-shadow: 0 0 32px 0 rgba(0,0,0,0.64);
+    background-color: #121212;
+    box-shadow: 0 0 32px 0 rgba(24, 23, 23, 0.64);
     border: 1px solid $gray-800;
     border-left: none;
   }
   
   .navbar-brand a, .navbar .navbar-nav .nav-link,
   .navbar-brand a, .navbar .navbar-nav a.dropdown-item {
-    color: $white !important;
+    color: #ffffffd9 !important;
   }
   
   .navbar .navbar-nav .nav-link:hover,
@@ -84,6 +84,30 @@ body[dark-mode] {
   .search-bar p {
     color: $white;
   }
+
+  h1, .h1{
+    color: #ffffffd9;
+  }
+  h2, .h2{
+    color: #ffffffd9;
+  }
+   h3, .h3{
+    color: #ffffffd9;
+  }
+   h4, .h4{
+    color: #ffffffd9;
+  }
+   h5, .h5{
+    color: #ffffffd9;
+  }
+   h6, .h6{
+    color: #ffffffd9;
+  }
+
+  p{
+    color: #ffffffd9;
+  }
+  
   
   .results-wrap:last-of-type {
     border-bottom: none;
@@ -137,5 +161,9 @@ body[dark-mode] {
   
   .btn-primary:disabled, .btn-primary.disabled {
     opacity: 1;
+  }
+
+  .card{
+    background-color: #1a1a1a;
   }
 }
