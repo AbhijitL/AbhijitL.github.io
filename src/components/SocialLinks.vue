@@ -59,5 +59,14 @@
         <a class="fa-brands fa-spotify fa-2x"></a>
       </a>
     </div>
+    <div class="col">
+      <a
+        href="https://steamcommunity.com/profiles/76561198366933657/"
+        target="_blank"
+        title="Steam"
+      >
+        <a class="fa-brands fa-steam fa-2x"></a>
+      </a>
+    </div>
   </div>
 </template>
