@@ -11,7 +11,7 @@
           </div>
         </div>
       </div>
-      <p>Work in progress gallery</p>
+      <p>A Work in progress gallery</p>
       <div class="fefd">
         <CoolLightBox
           :items="items"
