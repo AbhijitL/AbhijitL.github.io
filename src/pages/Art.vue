@@ -13,14 +13,14 @@
       </div>
       <p>Work in progress gallery</p>
       <div class="fefd">
-        <gallery
-          :images="images"
+        <CoolLightBox
+          :items="items"
           :index="index"
           @close="index = null"
-        ></gallery>
+        ></CoolLightBox>
         <div
           class="image"
-          v-for="(image, imageIndex) in images"
+          v-for="(image, imageIndex) in items"
           :key="imageIndex"
           @click="index = imageIndex"
           :style="{
@@ -36,6 +36,8 @@
 
 <script>
 // import VueGallery from "vue-gallery";
+import CoolLightBox from "vue-cool-lightbox";
+import "vue-cool-lightbox/dist/vue-cool-lightbox.min.css";
 export default {
   metaInfo() {
     return {
@@ -44,7 +46,7 @@ export default {
   },
   data: function () {
     return {
-      images: [
+      items: [
         "https://i.imgur.com/8VMtwWE.jpg",
         "https://i.imgur.com/X5GNa4b.png",
         "https://i.imgur.com/rw6h68U.jpg",
@@ -60,9 +62,10 @@ export default {
     };
   },
 
-  // components: {
-  //   gallery: VueGallery,
-  // },
+  components: {
+    // gallery: VueGallery,
+    CoolLightBox,
+  },
 };
 </script>
 <style scoped>
