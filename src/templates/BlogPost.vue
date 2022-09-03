@@ -34,7 +34,8 @@
           </article>
 
           <div class="divider mt-32"></div>
-          <!-- <div class="divider"></div> -->
+          <Disqus shortname="abhijitl" :identifier="$page.blog.id" />
+          <div class="divider"></div>
         </div>
       </div>
     </div>
