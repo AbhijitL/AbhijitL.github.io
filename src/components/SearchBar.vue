@@ -1,16 +1,16 @@
 <template>
   <div>
     <search-focus @keyup="focusSearch"></search-focus>
-    
-    <div class="search-bar">    
+
+    <div class="search-bar">
       <ToggleDarkMode>
-        <font-awesome :icon="['fas', 'adjust']"/>
+        <font-awesome :icon="['fas', 'adjust']" />
       </ToggleDarkMode>
-      
-      <input 
-        type="text" 
-        class="form-control" 
-        id="fuse-search" 
+
+      <input
+        type="text"
+        class="form-control"
+        id="fuse-search"
         placeholder="🔍 Search..."
         v-model="query"
         @blur="searchResultsVisible = false"
@@ -19,20 +19,21 @@
         @input="searchResultsVisible = true"
         @keydown="performSearch"
         ref="search"
-      >
-      <div 
-        class="close"
-        v-if="query.length > 0"
-        @click="reset"
-      >
-        &times;
-      </div>
+      />
+      <div class="close" v-if="query.length > 0" @click="reset">&times;</div>
     </div>
-    
-    <div v-if="query.length > 1 && searchResultsVisible" class="search-bar-results">
-      <div class="results-wrap clearfix" v-for="(post, index) in searchResults" :key="index">
-        <a 
-          :href="post.item.path" 
+
+    <div
+      v-if="query.length > 1 && searchResultsVisible"
+      class="search-bar-results"
+    >
+      <div
+        class="results-wrap clearfix"
+        v-for="(post, index) in searchResults"
+        :key="index"
+      >
+        <a
+          :href="post.item.path"
           @mousedown.prevent="searchResultsVisible = true"
           :class="{ 'results-active': index === highlightedIndex }"
         >
@@ -40,33 +41,41 @@
             {{ post.item.title }}
           </div>
           <p class="float-start font-size-100 gray-500 mb-0 me-1">
-            <span class="small"><strong>{{ post.item.category }}</strong></span>
+            <span class="small"
+              ><strong>{{ post.item.category }}</strong></span
+            >
           </p>
           <p class="results-description">
             {{ post.item.description }}
           </p>
         </a>
       </div>
-      <div v-if="query.length > 1 && searchResults.length === 0"  class="px-3 py-2">
-        <div class="results-description mb-0">No results for <strong>"{{ query }}"</strong>.</div>
+      <div
+        v-if="query.length > 1 && searchResults.length === 0"
+        class="px-3 py-2"
+      >
+        <div class="results-description mb-0">
+          No results for <strong>"{{ query }}"</strong>.
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import SearchFocus from '@/components/SearchFocus.vue'
+import SearchFocus from "@/components/SearchFocus.vue";
 import ToggleDarkMode from "@/components/ToggleDarkMode";
-import axios from 'axios'
+import axios from "axios";
 
 export default {
-  name: 'SearchBar', 
+  name: "SearchBar",
   components: {
-    SearchFocus, ToggleDarkMode
+    SearchFocus,
+    ToggleDarkMode,
   },
   data() {
     return {
-      query: '',
+      query: "",
       searchResultsVisible: false,
       posts: [],
       searchResults: [],
@@ -79,33 +88,31 @@ export default {
         distance: 500,
         maxPatternLength: 32,
         minMatchCharLength: 1,
-        keys: ['title', 'description', 'category']
-      }
-    }
+        keys: ["title", "description", "category"],
+      },
+    };
   },
   created() {
-    axios.get('/search.json')
-    .then(response => {
-      this.posts = response.data
-    })
+    axios.get("/search-blog.json").then((response) => {
+      this.posts = response.data;
+    });
   },
   methods: {
     reset() {
-      this.query = ''
+      this.query = "";
     },
     performSearch() {
-      this.$search(this.query, this.posts, this.options)
-        .then(results => {
-          this.searchResults = results
-        })
+      this.$search(this.query, this.posts, this.options).then((results) => {
+        this.searchResults = results;
+      });
     },
     focusSearch(e) {
-      if (e.key === '/') {
-        this.$refs.search.focus()
+      if (e.key === "/") {
+        this.$refs.search.focus();
       }
     },
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss">
@@ -150,13 +157,13 @@ export default {
   height: 32px;
   font-size: $font-size-500;
   line-height: 1;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
   color: $black;
   font-weight: 500;
   opacity: 1;
   z-index: 99;
   border: 1px solid $gray-200;
-  box-shadow: 0 0 32px 0 rgba(0,0,0,0.08);
+  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.08);
   background-color: $white;
   float: left;
   margin-right: 0.25rem;
@@ -179,17 +186,19 @@ export default {
     right: 0;
     margin: 0.5rem 1rem 2rem;
   }
-  
+
   .search-bar .btn {
     width: 48px;
     float: right;
     margin-right: 0;
   }
-  
-  .search-bar .form-control, .search-bar .form-control:focus, .search-bar-results {
+
+  .search-bar .form-control,
+  .search-bar .form-control:focus,
+  .search-bar-results {
     width: calc(100% - 56px);
   }
-  
+
   .search-bar-results {
     min-width: none;
     position: absolute;
@@ -198,7 +207,7 @@ export default {
     width: calc(100% - 2rem);
     margin: 0 1rem;
   }
-  
+
   .search-bar .close {
     position: fixed;
     top: 140px;
@@ -223,7 +232,8 @@ export default {
   border-bottom: none;
 }
 
-.results-wrap:hover, .results-active {
+.results-wrap:hover,
+.results-active {
   background-color: #d4f4ff;
 }
 
