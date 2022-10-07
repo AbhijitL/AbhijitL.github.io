@@ -27,7 +27,7 @@
               </div>
             </div>
           </div>
-          <hr class="my-5" />
+          <hr class="my-1" />
 
           <h2>What I Do</h2>
           <div class="container text-center">
