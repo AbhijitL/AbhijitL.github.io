@@ -2,6 +2,10 @@
 body[dark-mode] {
   color: $white;
   background-color: #121212;
+  background-image: url("../images/gifs/notfound-back.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 body[dark-mode] {
