@@ -5,6 +5,7 @@ import '~/assets/scss/styles.scss'
 import DefaultLayout from '~/layouts/Default.vue'
 import FrontPage from '~/layouts/FrontPage.vue'
 import VueFuse from 'vue-fuse'
+import VueDisqus from 'vue-disqus'
 
 // Adding FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -28,10 +29,10 @@ export default function (Vue, { router, head, isClient }) {
     href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css"
   })
   Vue.use(VueFuse)
-
+  Vue.use(VueDisqus)
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 
   // Import FontAwesome
   Vue.component('font-awesome', FontAwesomeIcon)
-} 7
+}
