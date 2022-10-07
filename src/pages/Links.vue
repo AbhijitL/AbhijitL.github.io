@@ -14,7 +14,7 @@
       <div class="container-fluid">
         <div class="col-lg-12 gx-3">
           <div class="row">
-            <h3>Contact me @ labhijitsingh13@gmail.com</h3>
+            <h3>Contact me @labhijitsingh13@gmail.com</h3>
           </div>
           <div class="row">
             <p>Social links:</p>

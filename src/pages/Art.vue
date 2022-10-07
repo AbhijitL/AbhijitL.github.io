@@ -11,7 +11,7 @@
           </div>
         </div>
       </div>
-      <p>A Work in progress gallery</p>
+      <p>My collection of renders</p>
       <div class="fefd">
         <CoolLightBox
           :items="items"
@@ -144,6 +144,12 @@ export default {
           description: "Made using blender",
           src: "https://i.imgur.com/mKZGT9L.png",
           thumb: "https://i.imgur.com/mKZGT9Lh.png",
+        },
+        {
+          title: "BD1",
+          description: "Made using blender",
+          src: "https://i.imgur.com/RL6xX8B.png",
+          thumb: "https://i.imgur.com/RL6xX8Bh.png",
         },
         {
           title: "Godot intro logo",
