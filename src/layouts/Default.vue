@@ -6,9 +6,9 @@
 
     <main>
       <SearchBar />
-        
+
       <transition name="fade" appear>
-        <slot/>
+        <slot />
       </transition>
     </main>
 
@@ -26,20 +26,22 @@ query {
 </static-query>
 
 <script>
-import SearchBar from '@/components/SearchBar.vue'
-import Navbar from '@/components/Navbar.vue'
-import Footer from '@/components/Footer.vue'
+import SearchBar from "@/components/SearchBar.vue";
+import Navbar from "@/components/Navbar.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   components: {
-    Navbar, Footer, SearchBar
-  }
-}
+    Navbar,
+    Footer,
+    SearchBar,
+  },
+};
 </script>
 
 <style lang="scss">
 .fade-enter-active {
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 
 .fade-enter {
