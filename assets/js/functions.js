@@ -1,9 +1,25 @@
 // Events
 $(document).ready(make_chart_from_data);
+
+$(document).on('click', '#btnHomePage', function(){
+    if($('#id-home').length > 0){
+        return;
+    }
+    document.location.href='/';
+});
+
+$(document).on('click', '#btnAboutPage', function(){
+    if($('#id-about').length > 0){
+        return;
+    }
+    document.location.href='/about/';
+});
+
 // End of Events
 
 
 // Functions
+
 
 async function get_json_data(){
     const response = await fetch("assets/jsons/gitLangData.json");
