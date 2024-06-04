@@ -1,0 +1,23 @@
+
+title: AbhijitL
+email: labhijitsingh13@gmal.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Official site of Abhijit Leihaorambam
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: leihaorambam
+github_username:  AbhijitL
+
+permalink: pretty
+markdown: kramdown
+
+gems:
+  - jekyll-feed
+  - jekyll-autoprefixer
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+sass:
+  sass_dir: _sass
