@@ -1,0 +1,60 @@
+---
+layout: art-gallery
+title: "Art Gallery"
+permalink: "/art/"
+images:
+    - image_path: /assets/img/arts/p4/Social1.png
+      art-folder: 
+      art-name: P4 fanart
+      art-date: June 2023
+
+    - image_path: /assets/img/arts/p3/Social2k.png
+      art-folder: 
+      art-name: P3 fanart
+      art-date: June 2023
+
+    - image_path: /assets/img/arts/p3/Social2k.png
+      art-folder: 
+      art-name: P3 fanart
+      art-date: June 2023
+
+    - image_path: /assets/img/arts/p3/Social2k.png
+      art-folder: 
+      art-name: P3 fanart
+      art-date: June 2023
+
+    - image_path: /assets/img/arts/p3/Social2k.png
+      art-folder: 
+      art-name: P3 fanart
+      art-date: June 2023
+    
+---
+
+<div id="id-art" class="body-content" >
+    <div class="container">
+        <div class="row">
+            <div class="content">
+                <h1>{{ page.title }}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Gallery -->
+            <div style="margin-left: 10px;" class="gallery masonry-gallery">
+                {% for image in page.images %}
+                <div class="gallery-item">
+                    <header class="gallery-icon">
+                        <img src="{{ site.url }}{{ image.image_path }}"/>
+                    </header>
+                    <div class="gallery-caption">
+                        <div class="entry-summary">
+                            <h3>{{ image.art-name }}</h3>
+                            <p>{{ image.art-date }}</p>
+                        </div> 
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- End of Gallery -->
+        </div>
+    </div>
+</div>
