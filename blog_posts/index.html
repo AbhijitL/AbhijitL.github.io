@@ -10,8 +10,7 @@ active: blog_posts
             <div class="content">
                 <h1> Blog Posts </h1>
             </div>
-            <!-- BlogPosts y -->
-            
+            <!-- BlogPosts y -->            
             {% for post in paginator.posts %}
 
             <div class="content give_margin_right_lil">
@@ -19,7 +18,7 @@ active: blog_posts
                     <figure>
                         <div class="row">
                             <div class="col-4">
-                                <img style="max-width: 100%;" src="{{ site.baseurl }}{{ post.thumb }}"/>
+                                <img style="max-width: 100%;" class="give-shadow" src="{{ site.baseurl }}{{ post.thumb }}"/>
                             </div>
                             <div class="col-8">
                                 <h2> {{ post.title }} </h2>
