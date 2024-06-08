@@ -26,6 +26,14 @@ $(document).on('click', '#btnArtPage', function(){
     document.location.href='/art/';
 });
 
+$(document).on('click', '#btnBlogPostsPage', function(){
+    if($('#id-blogPosts').length > 0){
+        return;
+    }
+    document.location.href='/blog_posts/';
+});
+
+
 $(document).on('click', '#btnResume', function(){
     alert("you fool!");
 });

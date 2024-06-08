@@ -1,0 +1,62 @@
+---
+layout: blog_posts
+title: Blog Posts
+active: blog_posts
+---
+
+<div id="id-blogPosts" class="body-content">
+    <div class="container">
+        <div class="row">
+            <div class="content">
+                <h1> Blog Posts </h1>
+            </div>
+            <!-- BlogPosts y -->
+            
+            {% for post in paginator.posts %}
+
+            <div class="content give_margin_right_lil">
+                <a href="{{ post.url }}">
+                    <figure>
+                        <div class="row">
+                            <div class="col-4">
+                                <img style="max-width: 100%;" src="{{ site.baseurl }}{{ post.thumb }}"/>
+                            </div>
+                            <div class="col-8">
+                                <h2> {{ post.title }} </h2>
+                                <p> {{ post.description }} </p>
+                                <p> Published on: {{ post.date | date_to_string }} </p>
+                            </div>
+                        </div>
+                    </figure>
+                </a>
+            </div>
+            <div class="gap"></div>
+
+            {% endfor %}
+
+            <!-- End of BlogPosts -->
+            
+            <!-- Pagination -->
+            <div class="content give_margin_right_lil">
+                <div class="pagination">
+                    {% if paginator.previous_page %}
+                      <a href="{{ paginator.previous_page_path }}" class="previous">
+                        Previous
+                      </a>
+                    {% else %}
+                      <span class="previous">Previous</span>
+                    {% endif %}
+                    <span class="page_number ">
+                      Page: {{ paginator.page }} of {{ paginator.total_pages }}
+                    </span>
+                    {% if paginator.next_page %}
+                      <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+                    {% else %}
+                      <span class="next ">Next</span>
+                    {% endif %}
+                  </div>
+            </div>
+            <!-- End of Pagination -->
+        </div>
+    </div>
+</div>

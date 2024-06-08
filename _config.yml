@@ -10,12 +10,19 @@ github_username:  AbhijitL
 
 include: ['_pages']
 
+# build settings
 permalink: pretty
 markdown: kramdown
+paginate: 5
+paginate_path: "/blog_posts/page:num/"
+permalink: "/blog_posts/:title/"
 
 gems:
   - jekyll-feed
   - jekyll-autoprefixer
+  
+plugins:
+  - jekyll-paginate
 
 exclude:
   - Gemfile
