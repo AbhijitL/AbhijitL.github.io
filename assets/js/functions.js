@@ -146,7 +146,7 @@ function popup_image(){
          },
         image: {
             titleSrc: function(item) {
-                return item.el.attr('title') + 'by' + item.el.attr('data-caption');
+                return item.el.attr('title') + 'by ' + item.el.attr('data-caption');
             }
         }
     });

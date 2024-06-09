@@ -1,69 +1,69 @@
 - image_path: /assets/img/arts/p4/thumb.jpg
-  art-folder: 
+  art-folder: /_pages/art/p4/
   art-name: P4 fanart
   art-date: June 2023
 
 - image_path: /assets/img/arts/p3/thumb.jpg
-  art-folder: 
+  art-folder: /_pages/art/p3/
   art-name: P3 fanart
   art-date: May 2023
 
 - image_path: /assets/img/arts/MyChar/thumb.jpg
-  art-folder: 
+  art-folder: /_pages/art/MyChar/
   art-name: My Character
   art-date: Dec 2023
 
 - image_path: /assets/img/arts/labbo/thumb.jpg
-  art-folder: 
+  art-folder: /_pages/art/labbo/
   art-name: Labbo Stylized level CryEngine
   art-date: Sept 2023
 
 - image_path: /assets/img/arts/Cyborg/thumb.jpg
-  art-folder: 
+  art-folder: /_pages/art/Cyborg/
   art-name: Cyborg
   art-date: Dec 2022
 
 - image_path: /assets/img/arts/violet/thumb.jpg
-  art-folder: 
+  art-folder: /_pages/art/violet/
   art-name: Violet Evergarden
   art-date: Dec 2023
   
 - image_path: /assets/img/arts/city/thumb.jpg
-  art-folder: 
+  art-folder: /_pages/art/city/
   art-name: CityNight
   art-date: Dec 2023
   
 - image_path: /assets/img/arts/critter/thumb.jpg
-  art-folder: 
+  art-folder: /_pages/art/critter/
   art-name: Ancient Critter
   art-date: Feb 2020
   
 - image_path: /assets/img/arts/ghibli/thumb.jpg
-  art-folder: 
+  art-folder: /_pages/art/ghibli/
   art-name: Castle in the sky fanart
   art-date: Jan 2020
   
 - image_path: /assets/img/arts/robot/thumb.jpg
-  art-folder: 
+  art-folder: /_pages/art/robot/
   art-name: Robot
   art-date: Nov 2019
   
 - image_path: /assets/img/arts/serpent/thumb.jpg
-  art-folder: 
+  art-folder: /_pages/art/serpent/
   art-name: Serpent boss fight
   art-date: Mar 2023
   
 - image_path: /assets/img/arts/violet/ce/thumb.jpg
-  art-folder: 
+  art-folder: /_pages/art/violetCE/
   art-name: Violet Evergarden CryEngine
   art-date: Jan 2024
 
 - image_path: /assets/img/arts/ancient/thumb.jpg
-  art-folder: 
+  art-folder: /_pages/art/ancient/
   art-name: Ancient 
   art-date: Feb 2021
 
 - image_path: /assets/img/arts/cave/thumb.jpg
-  art-folder: 
+  art-folder: /_pages/art/cave/
   art-name: Unreal Engine 5 Cave
   art-date: May 2022

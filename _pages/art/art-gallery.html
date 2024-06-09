@@ -17,7 +17,9 @@ permalink: "/art/"
                 {% for image in site.data.art_images %}
                 <div class="gallery-item">
                     <header class="gallery-icon">
-                        <img src="{{ site.url }}{{ image.image_path }}"/>
+                        <a href="{{ site.baseurl }}{{ image.art-folder }}">
+                            <img src="{{ site.baseurl }}{{ image.image_path }}"/>
+                        </a>
                     </header>
                     <div class="gallery-caption">
                         <div class="entry-summary">
