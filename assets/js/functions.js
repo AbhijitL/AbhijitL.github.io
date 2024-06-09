@@ -5,6 +5,10 @@ jQuery(window).on( 'load', function(){
     window.setTimeout( setup_art_gallery_layout(), 1500 );
 });
 
+jQuery(window).on( 'load', function(){
+    popup_image();
+});
+
 $(document).on('click', '#btnHomePage', function(){
     if($('#id-home').length > 0){
         return;
@@ -124,5 +128,25 @@ function setup_art_gallery_layout(){
 		});
 	
 	});
+}
 
+function popup_image(){
+
+    if($('#id-artPage').length <= 0){
+        return;
+    }
+
+    $('a.popup').magnificPopup({
+        type: 'image',
+        gallery:{
+            enabled:true,
+            navigateByImgClick: true,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+         },
+        image: {
+            titleSrc: function(item) {
+                return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+    });
 }
