@@ -140,12 +140,13 @@ function popup_image(){
         type: 'image',
         gallery:{
             enabled:true,
+            alignTop: true,
             navigateByImgClick: true,
-            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+            preload: [0,1], // Will preload 0 - before current, and 1 after the current image
          },
         image: {
             titleSrc: function(item) {
-                return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+                return item.el.attr('title') + 'by' + item.el.attr('data-caption');
             }
         }
     });
