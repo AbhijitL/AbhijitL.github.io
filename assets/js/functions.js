@@ -1,3 +1,9 @@
+// Variables
+
+var isProjectListVisible = false;
+
+// End of Variables
+
 // Events
 $(document).ready(make_chart_from_data);
 
@@ -37,6 +43,13 @@ $(document).on('click', '#btnBlogPostsPage', function(){
     document.location.href='/blog_posts/';
 });
 
+$(document).on('click', '#btnGamePage', function(){
+    if($('#id-game').length > 0){
+        return;
+    }
+    document.location.href='/_pages/project/game/';
+});
+
 
 $(document).on('click', '#btnResume', function(){
     alert("you fool!");
@@ -44,6 +57,10 @@ $(document).on('click', '#btnResume', function(){
 
 $(document).on('click', '#btnGoMore', function(){
     document.location.href='/about/';
+});
+
+$(document).on('click', '#btnProjects', function(){
+    slide_down_projects();
 });
 
 // End of Events
@@ -146,8 +163,24 @@ function popup_image(){
          },
         image: {
             titleSrc: function(item) {
-                return item.el.attr('title') + 'by ' + item.el.attr('data-caption');
+                return item.el.attr('title') + ' by ' + item.el.attr('data-caption');
             }
         }
     });
+}
+
+
+function slide_down_projects(){
+    if(!isProjectListVisible){
+        $('#id-slide').slideDown();
+        isProjectListVisible = true;
+    }else{
+        $('#id-slide').slideUp();
+        isProjectListVisible = false;
+    }
+}
+
+function open_link(id){
+    var val = $(id).attr('data-value');
+    window.open(val, "_blank");
 }
