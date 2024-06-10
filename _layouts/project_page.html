@@ -19,7 +19,7 @@ layout: default
                     <h2 id="{{  project.detail.id | slugify }}"> {{ project.name }} </h2>
 
                     {% if project.thumb.type == "video" %}
-                    <video id="{{ project.detail.id | slugify }}-vid" class="center-img give-shadow" controls loop >
+                    <video id="{{ project.detail.id | slugify }}-vid" class="center-img give-shadow" preload="true" autoplay = "autoplay" loop = "loop" muted="true" controls >
                         <source src="{{site.baseurl}}{{ project.thumb.path }}" type="video/webm"/>
                     </video>
                     {% endif %}
