@@ -43,6 +43,20 @@ $(document).on('click', '#btnBlogPostsPage', function(){
     document.location.href='/blog_posts/';
 });
 
+$(document).on('click', '#btnUtilityPage', function(){
+    if($('#id-tool').length > 0){
+        return;
+    }
+    document.location.href='/_pages/project/tool/';
+});
+
+$(document).on('click', '#btnOtherPage', function(){
+    if($('#id-other').length > 0){
+        return;
+    }
+    document.location.href='/_pages/project/other/';
+});
+
 $(document).on('click', '#btnGamePage', function(){
     if($('#id-game').length > 0){
         return;
@@ -50,6 +64,12 @@ $(document).on('click', '#btnGamePage', function(){
     document.location.href='/_pages/project/game/';
 });
 
+$(document).on('click', '#btnMobilePage', function(){
+    if($('#id-mobile').length > 0){
+        return;
+    }
+    document.location.href='/_pages/project/mobile/';
+});
 
 $(document).on('click', '#btnResume', function(){
     alert("you fool!");

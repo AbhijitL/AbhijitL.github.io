@@ -24,9 +24,12 @@ layout: default
                     </video>
                     {% endif %}
 
-                    {% if project.thumb.type == "image" %}
+                    {% if project.thumb.type == "image"%}
                     <img class="center-img give-shadow" src="{{site.baseurl}}{{ project.thumb.path }}" />
+                    {% elsif project.thumb.type == "small-image" %}
+                    <img class="center-img give-shadow" style="text-align: center; width: 200px;" src="{{site.baseurl}}{{ project.thumb.path }}" />
                     {% endif %}
+
                     <div class="gap"></div>
                     <p style="text-align: justify;"> {{ project.description }} </p>
                     <div class="row">
