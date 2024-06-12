@@ -1,0 +1,75 @@
+---
+layout: default
+---
+
+<div class="body-content">
+    <div id="id-{{ page.id }}" class="container">
+        <div class="row">
+            <div class="content">
+                <h1>{{ page.title }}</h1>
+            </div>
+            
+            <!-- Projects -->
+
+            {% for project in page.projects %}
+
+            <div class="content give_margin_right_lil">
+                <div class="row">
+
+                    <h2 id="{{  project.detail.id | slugify }}"> {{ project.name }} </h2>
+
+                    {% if project.thumb.type == "video" %}
+                    <video id="{{ project.detail.id | slugify }}-vid" class="center-img give-shadow" preload="true" autoplay = "autoplay" loop = "loop" muted="true" controls >
+                        <source src="{{site.baseurl}}{{ project.thumb.path }}" type="video/webm"/>
+                    </video>
+                    {% endif %}
+
+                    {% if project.thumb.type == "image"%}
+                    <img class="center-img give-shadow" src="{{site.baseurl}}{{ project.thumb.path }}" />
+                    {% elsif project.thumb.type == "small-image" %}
+                    <img class="center-img give-shadow" style="text-align: center; width: 200px;" src="{{site.baseurl}}{{ project.thumb.path }}" />
+                    {% endif %}
+
+                    <div class="gap"></div>
+                    <p style="text-align: justify;"> {{ project.description }} </p>
+                    <div class="row">
+                        <h2>Details</h2>
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="content">
+                                        {% if project.detail.type == "game" %}
+                                        <p> Engine: {{ project.detail.tech }} </p>
+                                        {% else %}
+                                        <p> SDK: {{ project.detail.tech }} </p>
+                                        {% endif %}
+
+                                        <p> Languages: {{ project.detail.languages }} </p>
+
+                                        {% if project.detail.opensource == true %}
+                                        <p>Opensource: True</p>
+                                        <div id="btn-projectSource" class="Cbutton wide" data-value="{{ project.detail.project-link }}" onclick="open_link(this)" > Project Source </div>
+                                        {% else %}
+                                        <p>Opensource: False</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="row">
+                                    <div class="content">
+                                        <h2> Know more </h2>
+                                        <div id="btn-projectMore" class="Cbutton wide" data-value="{{ project.detail.more-link }}" onclick="open_link(this)" > More </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+            <!-- End of Projects -->
+
+        </div>
+    </div>
+</div>

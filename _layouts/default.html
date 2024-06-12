@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        {% include head.html %}
+    </head>
+    <header>
+        {% include nav.html %}
+        <div class="pattern">
+            <div>
+              <div class="pattern-inner"></div>
+            </div>
+        </div>
+        {% include search.html %}
+    </header>
+    <body>
+        <div>
+            <h1 style="text-align: center;">Libera me from the Hell.</h1>
+        </div>
+        {{ content }}
+        {% include js-link.html %}
+        <div>
+            <h1 style="text-align: center;">I will convey your will to this world.</h1>
+        </div>
+        <div class="pattern">
+            <div>
+              <div class="pattern-inner"></div>
+            </div>
+        </div>
+    </body>
+</html>
