@@ -59,71 +59,89 @@
     
     {
       
-         "title"    : "Ancient Ritual Site",
-         "url"      : "/_pages/art/ancient/"
-      
-    } ,
-    
-    {
-      
-         "title"    : "Cave UE5",
-         "url"      : "/_pages/art/cave/"
-      
-    } ,
-    
-    {
-      
-         "title"    : "Night City",
-         "url"      : "/_pages/art/city/"
-      
-    } ,
-    
-    {
-      
          "title"    : "Critter",
-         "url"      : "/_pages/art/critter/"
+         "url"      : "/art/critter/"
       
     } ,
     
     {
       
          "title"    : "Cyborg",
-         "url"      : "/_pages/art/Cyborg/"
+         "url"      : "/art/Cyborg/"
       
     } ,
     
     {
       
          "title"    : "Castle in the sky fan made",
-         "url"      : "/_pages/art/ghibli/"
+         "url"      : "/art/ghibli/"
       
     } ,
     
     {
       
-         "title"    : "Blog Posts",
-         "url"      : "/blog_posts/"
+         "title"    : "Labbo stylized level design CE5",
+         "url"      : "/art/labbo/"
       
     } ,
     
     {
       
          "title"    : "My Character",
-         "url"      : "/_pages/art/MyChar/"
+         "url"      : "/art/MyChar/"
       
     } ,
     
     {
       
          "title"    : "Persona 3 reload aigis fanart",
-         "url"      : "/_pages/art/p3/"
+         "url"      : "/art/p3/"
       
     } ,
     
     {
       
          "title"    : "Persona 4 fan art",
-         "url"      : "/_pages/art/p4/"
+         "url"      : "/art/p4/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Robot",
+         "url"      : "/art/robot/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Cave UE5",
+         "url"      : "/art/cave/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Violet Evegarden Fan Art",
+         "url"      : "/art/violet/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Violet Evegarden CryEngine Fan Art",
+         "url"      : "/art/violetCE/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Night City",
+         "url"      : "/art/city/"
+      
+    } ,
+    
+    {
       
     } ,
     
@@ -136,68 +154,50 @@
     
     {
       
-         "title"    : "Serpent boss fight",
-         "url"      : "/_pages/art/serpent/"
-      
-    } ,
-    
-    {
-      
-         "title"    : "Violet Evegarden Fan Art",
-         "url"      : "/_pages/art/violet/"
-      
-    } ,
-    
-    {
-      
-         "title"    : "Violet Evegarden CryEngine Fan Art",
-         "url"      : "/_pages/art/violetCE/"
-      
-    } ,
-    
-    {
-      
-         "title"    : "Labbo stylized level design CE5",
-         "url"      : "/_pages/art/labbo/"
+         "title"    : "Blog Posts",
+         "url"      : "/blog_posts/"
       
     } ,
     
     {
       
          "title"    : "Game Projects",
-         "url"      : "/_pages/project/game/"
+         "url"      : "/project/game/"
       
     } ,
     
     {
       
          "title"    : "Mobile app Projects",
-         "url"      : "/_pages/project/mobile/"
+         "url"      : "/project/mobile/"
       
     } ,
     
     {
       
          "title"    : "Other Projects",
-         "url"      : "/_pages/project/other/"
+         "url"      : "/project/other/"
       
     } ,
     
     {
       
          "title"    : "Tools and utility Projects",
-         "url"      : "/_pages/project/tool/"
+         "url"      : "/project/tool/"
       
     } ,
     
     {
       
-         "title"    : "Robot",
-         "url"      : "/_pages/art/robot/"
+         "title"    : "Serpent boss fight",
+         "url"      : "/art/serpent/"
       
     } ,
     
     {
+      
+         "title"    : "Ancient Ritual Site",
+         "url"      : "/art/ancient/"
       
     } ,
     
