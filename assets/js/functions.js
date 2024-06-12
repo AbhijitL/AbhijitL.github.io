@@ -4,6 +4,18 @@ var isProjectListVisible = false;
 
 // End of Variables
 
+// Search
+
+SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li class="search-result"><a href="{url}">{title}</a></li>'
+});
+
+// End of Search
+
+
 // Events
 $(document).ready(make_chart_from_data);
 
