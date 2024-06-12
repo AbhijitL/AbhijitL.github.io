@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-06-12T22:04:23+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">AbhijitL</title><subtitle>Official site of Abhijit Leihaorambam</subtitle><entry><title type="html">I switched to jekyll!!</title><link href="http://localhost:4000/blog_posts/jekyll/" rel="alternate" type="text/html" title="I switched to jekyll!!" /><published>2024-06-08T00:00:00+05:30</published><updated>2024-06-08T00:00:00+05:30</updated><id>http://localhost:4000/blog_posts/jekyll</id><content type="html" xml:base="http://localhost:4000/blog_posts/jekyll/"><![CDATA[<h2 id="hello-jekyll">Hello Jekyll!!</h2>
+
+<p>Before switching to jekyll i used Gridsome which is a static site generator using Vue.js.</p>
+
+<p>But this was abandoned few years ago and maitaining the project was tiring and not cool for me,
+And I always wanted to make a new site without using unnecessary npm packages which was causing 
+too many dependency errors and vulnerability.</p>
+
+<div class="language-ruby highlighter-coderay"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
+<a href="#n2" name="n2">2</a>
+<a href="#n3" name="n3">3</a>
+</pre></td>
+  <td class="code"><pre><span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">foo</span>
+  puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">foo lolololllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll</span><span style="color:#710">'</span></span> 
+<span style="color:#080;font-weight:bold">end</span>
+</pre></td>
+</tr></table>
+</div>]]></content><author><name>Abhijit Leihaorambam</name></author><category term="jekyll" /><summary type="html"><![CDATA[This is my first jekyll blog!]]></summary></entry><entry><title type="html">Setting Up C SDL2 with subilme text for window and linux</title><link href="http://localhost:4000/blog_posts/Post4/" rel="alternate" type="text/html" title="Setting Up C SDL2 with subilme text for window and linux" /><published>2022-10-15T00:00:00+05:30</published><updated>2022-10-15T00:00:00+05:30</updated><id>http://localhost:4000/blog_posts/Post4</id><content type="html" xml:base="http://localhost:4000/blog_posts/Post4/"><![CDATA[<p>
+I wrote this tutorial as there was no good tutorial on internet on how to setup
+sublime text for developing sdl2 ptoject using C programming language that actually compiles and works.
+</p>
+
+<p>First of all you need to have <a href="https://www.sublimetext.com/3">Sublime Text</a> installed on your system.
+So, now let’s get the SDL2 on your system.</p>
+<h3 id="for-window-user">For Window user</h3>
+<ol>
+  <li>I assume that you already have mingw on your system. if not install it from here <a href="https://sourceforge.net/projects/mingw/files/latest/download">Mingw</a> and try running <code>gcc</code> on cmd to see if it is working.</li>
+  <li>Download the SDL2 from <a href="https://github.com/libsdl-org/SDL/releases/tag/release-2.24.1">here</a> and choose the one with <code>mingw.zip</code>
+<img src="/assets/img/blogs/programming/sdl2/1/1.jpg" /></li>
+  <li>Extract the zip and copy the <code>x86_64-w64-mingw32</code> folder and create a folder name Dev to you local drive C and paste it there.
+And rename it to <code>SDL2</code> for simplicity. Now everything is ready to setup for sublime text.</li>
+</ol>
+
+<h3 id="for-linux-user">For Linux user</h3>
+<p>For linux it is easy to setup sdl2 you just need to run the command lines on your terminal.</p>
+
+<ol>
+  <li>Open up your terminal and run <code>sudo apt-get install libsdl2-2.0</code></li>
+  <li>After that run <code>sudo apt-get install libsdl2-dev</code></li>
+</ol>
+
+<p>That’s all for linux</p>
+
+<h3 id="now-lets-setup-sublime-text">Now lets setup Sublime text.</h3>
+<ol>
+  <li>Open up sublime text and open a empty folder to store your project files. Create two folders <code>src</code> and <code>bin</code>. Inside <code>bin</code> folder
+create two folders <code>debug</code> and <code>release</code>. The project stucture should lool like this
+    <div class="language-plaintext highlighter-coderay"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
+<a href="#n2" name="n2">2</a>
+<a href="#n3" name="n3">3</a>
+<a href="#n4" name="n4">4</a>
+<strong><a href="#n5" name="n5">5</a></strong>
+</pre></td>
+  <td class="code"><pre>project_folder:
+ bin:
+     debug
+     release
+ src:
+</pre></td>
+</tr></table>
+    </div>
+  </li>
+  <li>In the main directory create a file name <code>sdl2.sublime-project</code> and save it.</li>
+  <li>Now paste the following code for window system.
+    <div class="language-plaintext highlighter-coderay"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
+<a href="#n2" name="n2">2</a>
+<a href="#n3" name="n3">3</a>
+<a href="#n4" name="n4">4</a>
+<strong><a href="#n5" name="n5">5</a></strong>
+<a href="#n6" name="n6">6</a>
+<a href="#n7" name="n7">7</a>
+<a href="#n8" name="n8">8</a>
+<a href="#n9" name="n9">9</a>
+<strong><a href="#n10" name="n10">10</a></strong>
+<a href="#n11" name="n11">11</a>
+<a href="#n12" name="n12">12</a>
+<a href="#n13" name="n13">13</a>
+<a href="#n14" name="n14">14</a>
+<strong><a href="#n15" name="n15">15</a></strong>
+<a href="#n16" name="n16">16</a>
+<a href="#n17" name="n17">17</a>
+<a href="#n18" name="n18">18</a>
+<a href="#n19" name="n19">19</a>
+<strong><a href="#n20" name="n20">20</a></strong>
+<a href="#n21" name="n21">21</a>
+<a href="#n22" name="n22">22</a>
+<a href="#n23" name="n23">23</a>
+<a href="#n24" name="n24">24</a>
+<strong><a href="#n25" name="n25">25</a></strong>
+<a href="#n26" name="n26">26</a>
+</pre></td>
+  <td class="code"><pre>{
+ &quot;folders&quot;:
+ [
+     {
+         &quot;path&quot;: &quot;bin/..&quot;,
+         &quot;file_exclude_patterns&quot;: [&quot;*.sublime-project&quot;]
+     }
+ ],
+ &quot;build_systems&quot;:
+ [
+     {
+         &quot;name&quot;: &quot;Build Debug&quot;,
+         &quot;working_dir&quot;: &quot;${project_path}&quot;,
+         &quot;cmd&quot;: &quot;gcc -c src/*.c -g -Wall -std=c17 -m64 -I include -I C:/Dev/SDL2/include &amp;&amp; gcc *.o -o bin/debug/main -L C:/Dev/SDL2/bin  -lmingw32 -L C:/Dev/SDL2/lib/ -lSDL2main -lSDL2 &amp;&amp; start bin/debug/main&quot;,
+         &quot;selector&quot;: &quot;source.c&quot;,
+         &quot;shell&quot;: true                
+     },
+     {
+         &quot;name&quot;: &quot;Build Release&quot;,
+         &quot;working_dir&quot;: &quot;${project_path}&quot;,
+         &quot;cmd&quot;: &quot;gcc -c src/*.c -O3 -Wall -std=c17 -m64 -I include -I C:/Dev/SDL2/include &amp;&amp; gcc *.o -o bin/release/main -L C:/Dev/SDL2/bin -s -lmingw32 -L C:/Dev/SDL2/lib/ -lSDL2main -lSDL2 &amp;&amp; start bin/release/main&quot;,
+         &quot;selector&quot;: &quot;source.c&quot;,
+         &quot;shell&quot;: true
+     }
+ ]
+}
+</pre></td>
+</tr></table>
+    </div>
+  </li>
+</ol>
+
+<p>For Linux</p>
+
+<div class="language-plaintext highlighter-coderay"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
+<a href="#n2" name="n2">2</a>
+<a href="#n3" name="n3">3</a>
+<a href="#n4" name="n4">4</a>
+<strong><a href="#n5" name="n5">5</a></strong>
+<a href="#n6" name="n6">6</a>
+<a href="#n7" name="n7">7</a>
+<a href="#n8" name="n8">8</a>
+<a href="#n9" name="n9">9</a>
+<strong><a href="#n10" name="n10">10</a></strong>
+<a href="#n11" name="n11">11</a>
+<a href="#n12" name="n12">12</a>
+<a href="#n13" name="n13">13</a>
+<a href="#n14" name="n14">14</a>
+<strong><a href="#n15" name="n15">15</a></strong>
+<a href="#n16" name="n16">16</a>
+<a href="#n17" name="n17">17</a>
+<a href="#n18" name="n18">18</a>
+<a href="#n19" name="n19">19</a>
+<strong><a href="#n20" name="n20">20</a></strong>
+<a href="#n21" name="n21">21</a>
+<a href="#n22" name="n22">22</a>
+<a href="#n23" name="n23">23</a>
+<a href="#n24" name="n24">24</a>
+<strong><a href="#n25" name="n25">25</a></strong>
+<a href="#n26" name="n26">26</a>
+</pre></td>
+  <td class="code"><pre>{
+        &quot;folders&quot;:
+        [
+                {
+                        &quot;path&quot;: &quot;bin/..&quot;,
+                        &quot;file_exclude_patterns&quot;: [&quot;*.sublime-project&quot;]
+                }
+        ],
+        &quot;build_systems&quot;:
+        [
+                {
+                        &quot;name&quot;: &quot;Build Debug&quot;,
+                        &quot;working_dir&quot;: &quot;${project_path}&quot;,
+                        &quot;cmd&quot;: [&quot;gcc -c src/*.c -g -Wall -std=c17 -m64 -I include &amp;&amp; gcc *.o -o bin/debug/main -lSDL2main -lSDL2 &amp;&amp; ./bin/debug/main&quot;],
+                        &quot;selector&quot;: &quot;source.c&quot;,
+                        &quot;shell&quot;: true                
+                },
+                {
+                        &quot;name&quot;: &quot;Build Release&quot;,
+                        &quot;working_dir&quot;: &quot;${project_path}&quot;,
+                        &quot;cmd&quot;: [&quot;gcc -c src/*.c -g -Wall -std=c17 -m64 -O3 -I include &amp;&amp; gcc *.o -o bin/release/main -s -lSDL2main -lSDL2 &amp;&amp; ./bin/release/main&quot;],
+                        &quot;selector&quot;: &quot;source.c&quot;,
+                        &quot;shell&quot;: true
+                }
+        ]
+}
+</pre></td>
+</tr></table>
+</div>
+<p>Finally it should look like this</p>
+
+<p><img src="/assets/img/blogs/programming/sdl2/1/2.jpg" /></p>
+
+<h3 id="for-windows">For windows</h3>
+<p>To be able to run sdl2 you need to put the sdl2 dll files on the <code>debug</code> and <code>release</code> folder.</p>
+
+<ol>
+  <li>Go to <code>C:/Dev/SDL2/lib/</code> and copy the <code>SDL2.dll</code> file and paste it into <code>debug</code> and <code>release</code> folder.</li>
+</ol>
+
+<p>Now you are ready to write some codes.</p>
+
+<h3 id="for-linux">For Linux</h3>
+<ol>
+  <li>Go to your <code>root</code> folder after that to <code>lib</code> folder and go to <code>x86_64-linux-gnu</code>.</li>
+  <li>Now search for <code>libSDL2-2.0.so.0.10.0</code> and copy it.</li>
+  <li>Now paste the copied file to your <code>debug</code> folder and rename it to <code>libSDL2.so</code>.</li>
+  <li>Now copy the <code>libSDL2.so</code> file and paste it to the release folder.</li>
+</ol>
+
+<p>Now we are done for linux and ready to code.</p>
+
+<h3 id="code-a-simple-window">Code a simple window</h3>
+<p>Now create a new file <code>main.c</code> on the <code>src</code> folder.
+And paste the following code.</p>
+<div class="language-cpp highlighter-coderay"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
+<a href="#n2" name="n2">2</a>
+<a href="#n3" name="n3">3</a>
+<a href="#n4" name="n4">4</a>
+<strong><a href="#n5" name="n5">5</a></strong>
+<a href="#n6" name="n6">6</a>
+<a href="#n7" name="n7">7</a>
+<a href="#n8" name="n8">8</a>
+<a href="#n9" name="n9">9</a>
+<strong><a href="#n10" name="n10">10</a></strong>
+<a href="#n11" name="n11">11</a>
+<a href="#n12" name="n12">12</a>
+<a href="#n13" name="n13">13</a>
+<a href="#n14" name="n14">14</a>
+<strong><a href="#n15" name="n15">15</a></strong>
+<a href="#n16" name="n16">16</a>
+<a href="#n17" name="n17">17</a>
+<a href="#n18" name="n18">18</a>
+<a href="#n19" name="n19">19</a>
+<strong><a href="#n20" name="n20">20</a></strong>
+<a href="#n21" name="n21">21</a>
+<a href="#n22" name="n22">22</a>
+<a href="#n23" name="n23">23</a>
+<a href="#n24" name="n24">24</a>
+<strong><a href="#n25" name="n25">25</a></strong>
+<a href="#n26" name="n26">26</a>
+<a href="#n27" name="n27">27</a>
+<a href="#n28" name="n28">28</a>
+<a href="#n29" name="n29">29</a>
+<strong><a href="#n30" name="n30">30</a></strong>
+<a href="#n31" name="n31">31</a>
+<a href="#n32" name="n32">32</a>
+<a href="#n33" name="n33">33</a>
+<a href="#n34" name="n34">34</a>
+<strong><a href="#n35" name="n35">35</a></strong>
+<a href="#n36" name="n36">36</a>
+<a href="#n37" name="n37">37</a>
+<a href="#n38" name="n38">38</a>
+<a href="#n39" name="n39">39</a>
+<strong><a href="#n40" name="n40">40</a></strong>
+<a href="#n41" name="n41">41</a>
+<a href="#n42" name="n42">42</a>
+<a href="#n43" name="n43">43</a>
+<a href="#n44" name="n44">44</a>
+<strong><a href="#n45" name="n45">45</a></strong>
+<a href="#n46" name="n46">46</a>
+<a href="#n47" name="n47">47</a>
+<a href="#n48" name="n48">48</a>
+<a href="#n49" name="n49">49</a>
+</pre></td>
+  <td class="code"><pre><span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;SDL2/SDL.h&gt;</span>
+<span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;stdio.h&gt;</span>
+<span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;stdlib.h&gt;</span>
+
+<span style="color:#579">#define</span> main SDL_main
+
+<span style="color:#0a8;font-weight:bold">int</span> main(<span style="color:#0a8;font-weight:bold">int</span> argc, <span style="color:#0a8;font-weight:bold">char</span> **argv)
+{
+  <span style="color:#080;font-weight:bold">if</span> (SDL_Init(SDL_INIT_EVERYTHING) != <span style="color:#00D">0</span>){
+    fprintf(stderr,<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Error initilizing SDL.</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>);
+      <span style="color:#080;font-weight:bold">return</span> EXIT_FAILURE;
+  }
+  <span style="color:#777">//Create a sdl window</span>
+  SDL_Window *window = SDL_CreateWindow(
+      <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">First Window</span><span style="color:#710">&quot;</span></span>,
+      SDL_WINDOWPOS_CENTERED,
+      SDL_WINDOWPOS_CENTERED,
+      <span style="color:#00D">400</span>,
+      <span style="color:#00D">400</span>,
+      <span style="color:#00D">0</span>
+    );
+  <span style="color:#080;font-weight:bold">if</span>(!window){
+    fprintf(stderr,<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Error creating SDL window</span><span style="color:#710">&quot;</span></span>);
+    <span style="color:#080;font-weight:bold">return</span> EXIT_FAILURE;
+  }
+  <span style="color:#777">//Create a sdl renderer</span>
+  SDL_Renderer *renderer = SDL_CreateRenderer(window,-<span style="color:#00D">1</span>,<span style="color:#00D">0</span>);
+  <span style="color:#080;font-weight:bold">if</span>(!renderer){
+    fprintf(stderr,<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Error creating SDL renderer</span><span style="color:#710">&quot;</span></span>);
+    <span style="color:#080;font-weight:bold">return</span> EXIT_FAILURE;
+  }
+
+  <span style="color:#080;font-weight:bold">while</span>(free){
+    SDL_Event event;
+    SDL_PollEvent(&amp;event);
+    <span style="color:#080;font-weight:bold">switch</span>(event.type){
+      <span style="color:#080;font-weight:bold">case</span> SDL_QUIT:
+        SDL_DestroyRenderer(renderer);
+        SDL_DestroyWindow(window);
+        SDL_Quit();
+        <span style="color:#080;font-weight:bold">break</span>;
+    }
+    SDL_SetRenderDrawColor(renderer,<span style="color:#00D">255</span>,<span style="color:#00D">0</span>,<span style="color:#00D">0</span>,<span style="color:#00D">255</span>); 
+    SDL_RenderClear(renderer);
+    SDL_RenderPresent(renderer);
+
+  }
+        <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">0</span>;
+}
+</pre></td>
+</tr></table>
+</div>
+<p>Now choose the build to <code>Build debug</code></p>
+
+<p><img src="/assets/img/blogs/programming/sdl2/1/3.jpg" /></p>
+
+<p>And finaly build and run the code by <code>CTRL+B</code>.
+Now you can see your window, with this you can create any graphics.</p>
+
+<p><img src="/assets/img/blogs/programming/sdl2/1/4.jpg" /></p>
+
+<p>Yaay finally we are running sdl2. Good Job and pat on your back.</p>
+
+<p><code>if you encountered any problem or any questions feel free to write a comment.</code></p>]]></content><author><name>Abhijit Leihaorambam</name></author><category term="tutorial" /><category term="cpp" /><summary type="html"><![CDATA[Setup C sdl2 develpoment project using sublime text.]]></summary></entry><entry><title type="html">Violet Evergarden the movie review</title><link href="http://localhost:4000/blog_posts/Post1/" rel="alternate" type="text/html" title="Violet Evergarden the movie review" /><published>2022-03-19T00:00:00+05:30</published><updated>2022-03-19T00:00:00+05:30</updated><id>http://localhost:4000/blog_posts/Post1</id><content type="html" xml:base="http://localhost:4000/blog_posts/Post1/"><![CDATA[<h2 id="review">Review</h2>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/434275887&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
+<div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sysofanas" title="𝘱𝘢𝘪𝘯痛み" target="_blank" style="color: #cccccc; text-decoration: none;"></a> · <a href="https://soundcloud.com/sysofanas/never-coming-back" title="Violet Evergarden OST -  Never Coming Back" target="_blank" style="color: #cccccc; text-decoration: none;">Violet Evergarden OST -  Never Coming Back</a></div>
+
+<p>What is the definition of a masterpiece?. How do we know a piece of work whether it is a beautifully crafted object, words, scientific paper, art, literature, and the never-ending things?.We have rated many things masterpiece without properly knowing what a masterpiece actually is.</p>
+
+<p>This movie in my opinion marks the definition of a masterpiece. One of the best things I have ever felt in my life, the emotions that I usually ignored came … . I learned the meaning of those feeling which I thought I know to the fullest.</p>
+
+<p>Thank you KyoAni for producing this masterpiece and making me enjoy your work.</p>
+
+<p><img style="max-width: 100%" src="/assets/img/blogs/anime_review/violet/violet_2.png" /></p>
+
+<h2 id="about-the-anime">About the anime.</h2>
+<p>Trailer</p>
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NSIzsFOfd8M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<p>More: <a href="https://myanimelist.net/anime/37987/Violet_Evergarden_Movie">MyAnimeList</a> , Watch on <a href="https://www.netflix.com/title/81193214">Netflix</a></p>
+
+<h2 id="video-essay-on-the-movie">Video essay on the movie.</h2>
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TEOrPKlgQaQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/d_fMfH3ew4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h2 id="a-tribute-to-violet-evergarden">A Tribute to Violet Evergarden.</h2>
+<p>Here is my artwork i made using blender for this beloved anime.</p>
+<p align="center">
+<!-- <img src="https://i.imgur.com/8VMtwWE.jpg" /> -->
+</p>]]></content><author><name>Abhijit Leihaorambam</name></author><category term="anime review" /><summary type="html"><![CDATA[A short review on violet evergarden the movie]]></summary></entry><entry><title type="html">Girl’s last tour essay [SPOILER]</title><link href="http://localhost:4000/blog_posts/Post3/" rel="alternate" type="text/html" title="Girl’s last tour essay [SPOILER]" /><published>2022-03-19T00:00:00+05:30</published><updated>2022-03-19T00:00:00+05:30</updated><id>http://localhost:4000/blog_posts/Post3</id><content type="html" xml:base="http://localhost:4000/blog_posts/Post3/"><![CDATA[<p><code>Please watch the series or read the manga.This is not complete and I haven't written lots of important points, memoriable journeys and encounters here.</code></p>
+
+<p>The following story is from a manga written and illustrated by Tsukumizu.</p>
+
+<p>Girl’s last tour is a story about hopelessness in this post-apocalyptic world where humanity and living beings have almost perished in three major wars, the first war was the nuclear war which plunges the world into nuclear winter, the second war was where they utilized robots capable of destroying multiple cities and the third war was the war over the last remaining resources.</p>
+
+<p>The story started as the two protagonists Yuuri and Chito both girls of age 12 or 13 left their grandpa to flee from a war zone where the last settlements of humanity were fighting each other. They were told by their grandpa to go to the highest level of the city as there was no hope left and set them off on a journey on a reliable bike/tank hybrid vehicle mainly used for transportation of goods in a war zone.</p>
+
+<p align="center">
+<img style="width:500px" src="https://i0.wp.com/reasonstoanime.com/wp-content/uploads/2020/01/kettenkrad.jpg?resize=874%2C498&amp;ssl=1" />
+<p>
+
+The world where they are living right now is a vast empty abandoned towering city made up of multiple layers stacked on top of another which were built by the long-lost civilization of humanity which knowledge and technology are forgotten by current humanity.
+
+<p align="center">
+<img style="width:500px" src="https://animesolution.com/wp-content/uploads/2017/10/Shoujo-Shuumatsu-Ryokou_12.03_2017.10.20_10.34.34_stitch.jpg" />
+<p>
+
+A few years have passed since they left their grandpa. The two’s main objective was to find resources scattered throughout this world city and go toward a higher level of the city. Yuuri is a laidback and almost carefree attitude while Chito is calm and composed but can get angry at Yuuri on occasions. Chito drives and maintains the vehicle she does all of the work which requires planning and decision making while Yuuri does the work which requires physical. While traveling throughout this vast city they haven’t seen anything that can be called living beings heck they have never seen any living beings in their lives other than the few humans back in the settlement who may have long lost gone. They lived on rations that they salvaged from storage which was rare to find throughout these barren concrete buildings.
+
+<p align="center">
+<img style="width:500px" src="https://i.ytimg.com/vi/90rye3VMmHY/maxresdefault.jpg" />
+<p>
+
+While on one of their aimless journey they stumble upon what might have once been a war zone. Guns and military vehicles lay wasted upon the rubble. There was no shortage of weapons to be found on the ground while food on the other hand was scarce. Luckily they found some explosives and rations inside a decaying aircraft. The food will help for a few weeks. Yuuri mentions if people just focused on making food instead of weapons they would have been better off. Since they have been scavenging for hours they finally rest and ate the ration they found. Yuuri and Chito were surprised they have never tasted anything like this before, Yurri looks at the ration package and said “choco flavored bar” they don’t know what it is and never heard of it. While munching those bars Chitto asked why they were fighting, Yuuri answered probably due to low resources.
+
+<p align="center">
+<img style="width:500px" src="http://www.imfdb.org/images/b/b7/Shoujo_Shuumatsu_Ryokou_tank_1_4.jpg" />
+<p>
+
+
+Along the way, the story sets for the girls a series of encounters all focused on ideas of purpose happiness, and what keeps people going. The girls are kept going in the hope if they reach the top most level there will be other people waiting for them. Chito writes her daily event in a journal so that if she dies or something else happens at least there’s a possibility of her struggles living on without her while Yuuri is the opposite not caring too much and enjoying her in-the-moment experiences but they still get along really well and care about each other. On one of their journey, the girls thought of doing laundry in a stream of water created by the melting snow. They came across this mysterious thing which was flowing through the water, later they found it was once called fish by people from the past. They have never seen nor eaten fish in their lives only heard or read about them in books. They roast the fish for dinner which was surprisingly good for them as it was their fast time eating a fish.
+
+<p align="center">
+<img style="width:500px" src="https://i.imgur.com/MpepEwv.png" />
+<p>
+
+ While searching for the fish source they meet the first human character in the story a man obsessed with map-making, he has plotted many layers of the city, he is all alone but despite that, he fills his life with map-making. With his maps as a guide, he hitched a ride with the girls helping them to find resources for them. While on the way to the upper level of the city a hiccup in the elevator made his pages of maps spill out blowing in the wind, he’s defeated and decides not to continue with the girls, and one of the things he still has is his camera which he gives to the girls and leaves them forever.
+
+<p align="center">
+<img style="width:500px" src="https://i.imgur.com/NED3rcQ.png" />
+<p>
+
+As their journey continues, the vehicle broke down. Chito inspects the vehicle to see if she can fix it or not while Yuuri lay down on a boulder and sang “it’s hopeless” cheerfully which irritated Chito. The girls noticed someone on the horizon which lead to the next human they met, The human is a woman who is really good with technology and is trying to build herself a working plane so that she can fly out to a destination, she thinks that if she flies far enough she can leave the place and maybe find new people. The girls help her out in return she repairs their vehicle. After some time they eventually finally complete the plane which she takes off into the sky and it malfunctions causing her emergency ejection and parachute as she falls down to the lower level of the city, it may take probably years to make the plane from scratch again as if she manages to feed herself and make it back at all.
+
+<p align="center">
+<img style="width:500px" src="https://daladybug.productions/wp-content/uploads/2018/01/vlcsnap-2018-01-12-19h39m46s181.png" />
+<p>
+
+As the girls journey continues they stumble upon an old factory, they came across a robot that is made to take care of aquariums still functioning, this robot is caring for the only one living fish left on the earth. Yuuri wants to immediately eat it but the robot pleads with them not to do this.
+
+<p align="center">
+<img style="width:500px" src="https://cdn.anisearch.com/images/anime/screen/12/12597/full/386705.webp" />
+<p>
+
+Even tho if they eat the fish nothing will happen or nothing can be done as it can’t be reproduced as it’s the last fish on the earth. The robot was kind and helpful it even suggested sleeping near the pipes as it is warm and hot. Chito asked the robot “are you alive?”, the robot said, “No, I am programmed to be compassionate towards humans”.While they were in the factory another robot that was maintaining the place decided to break down the aquarium the fish was living in for using the resource on another critical part of the factory. Yuuri decided to help the aquarium fish caretake robot and help destroy the other construction robot so that it may help the aquarium robot to take care of the fish for a few more years. Which made Chito speaks, “Maybe life is what that has an end”.
+On their journey toward the higher level of the city, they encountered a lot of things, still working factory on the verge of a breakdown, the last remaining part of the world city where the electricity is still working, a mass graveyard of the long lost people, the recorded lives of many people from the past and many more. The girls had reached the third level of the city, in which they encounter an AI. The AI seems to have some sense of sentience. The AI can move endlessly, it is not bound by any sort of form almost like a ghost, and goes on telling how happy they are to finally have someone to talk to. The AI has been spending their endless lives writing poems for countless years. The AI helps them and offers to move them up into the next layer. They ask the girls in return to give them one thing. The AI asks if the girls will kill them.
+
+<p align="center">
+<img style="width:500px" src="https://mynameismitchell.files.wordpress.com/2018/03/ai-death2.jpg" />
+<p>
+
+As their journey has almost reached the final destination, the girls encounter a building that they inspect in order to look for rations, the place seems to be some sort of rocket launching station. There were lots of documents indicating a few groups of humans had left the planet earth on some big rocket.
+
+They have finally reached the place which leads to the last final level of the city. They continue to go upwards which took days, on their way they left almost all of their belonging as it was of no use to them their vehicle breakdown required them to leave.
+
+<p align="center">
+<img style="width:500px" src="https://mynameismitchell.files.wordpress.com/2018/03/kettenkrad1_waifu2x_art_scale_tta_1.png?w=768&amp;h=1135" />
+<p>
+
+
+They burned the journals, and books they have collected in order to keep them warm as it was meaningless now. They finally reached the final destination which was just a vast empty field of nothingness. The girls were happy that they reached the place their grandpa told them to. Chiito asked Yuuri if they have taken another way, what will be the scenario. As the girls take the last remaining rations and slept on the rubbles their journey ended as the snowfall covered them inch by inch.
+
+<p align="center">
+<img style="width:500px" src="https://mynameismitchell.files.wordpress.com/2018/03/img00018gca.png" />
+<p>
+
+<p align="center">
+<img style="width:500px" src="https://i.imgur.com/cLFxxsf.jpeg" />
+<p>
+
+<p>
+The End.
+</p>
+
+<h2>About the anime and manga.</h2>
+Trailer
+
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Lzw364Q-Edo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h2>
+Few essay videos on the anime.
+</h2>
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XYwHsCvFIDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FNnA0u8GIKY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7O3nvgVFCtA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<p align="center">
+<img style="width:500px" src="https://c.tenor.com/zZY7QH6D7uIAAAAd/girls-last-tour-shoujo-shuumatsu-ryokou.gif" />
+<p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p>]]></content><author><name>Abhijit Leihaorambam</name></author><category term="essay" /><summary type="html"><![CDATA[A post apocalytic hopelessness story, heavy spoiler warning watch the series first!!]]></summary></entry><entry><title type="html">Liz and the Blue Bird movie review</title><link href="http://localhost:4000/blog_posts/Post2/" rel="alternate" type="text/html" title="Liz and the Blue Bird movie review" /><published>2022-03-19T00:00:00+05:30</published><updated>2022-03-19T00:00:00+05:30</updated><id>http://localhost:4000/blog_posts/Post2</id><content type="html" xml:base="http://localhost:4000/blog_posts/Post2/"><![CDATA[<h2 id="review">Review</h2>
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/548334258&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
+<div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/takashitakashi-1" title="akakit" target="_blank" style="color: #cccccc; text-decoration: none;">akakit</a> · <a href="https://soundcloud.com/takashitakashi-1/video20181216113336824byvideoshow000" title="「リズと青い鳥」 reflexion,andante,you (for their last 4 steps)/kensuke ushio" target="_blank" style="color: #cccccc; text-decoration: none;">「リズと青い鳥」 reflexion,andante,you (for their last 4 steps)/kensuke ushio</a></div>
+
+<p>“Liz and the bluebird” is a tale of two beautiful friendships and it’s in a special place in my heart. This movie tells you the story of two best friends who never want to leave their path but they have to in order to go on their journey. Mizore and Nozomi are the main cast of this film, Mizore is a quiet girl who loves and wants to follow her best friend Nozomi but in order to carve their path they have to free themselves from each other to make them grow even more. Directed by the legendary director Yamada Naoko, who has also produced acclaimed movie such as Silent voice.</p>
+
+<p>This movie hits hard on my face as I was in the same situation as Mizore and Nazomi back in my high school days. It was hard to leave behind my best friend in order to pursue something I like. My friend and I never wanted to leave each other and thought we could continue the same path and go together. But life is unpredictable and I wanted to go to this college that I like which was far away from my state and my friend wanted to study near the state. As we know we have to keep flowing in order to reach the destination we wanted to reach and later we parted away towards our chosen paths in order to pursue our passions.</p>
+
+<p>This movie tells and shows the emotions of parting away of two best friends in order to pursue the paths they have chosen, to pursue the goal that almost all of us had or going to have in a beautiful way via Mizore and Nozomi.</p>
+
+<p>Thank you KyoAni for this beautiful film.</p>
+
+<p><img style="max-width: 100%;" src="/assets/img/blogs/anime_review/lizandblue/liz1.jpg" /></p>
+
+<h2 id="about-the-movie">About the movie.</h2>
+<p>Trailer</p>
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QR33NrbOUgE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<p>More: <a href="https://myanimelist.net/anime/35677/Liz_to_Aoi_Tori">MyAnimeList</a> , Watch on <a href="https://www.netflixmovies.com/liz-and-the-blue-bird-2018#">Netflix</a></p>
+
+<h2 id="few-essay-videos-on-the-movie">Few essay videos on the movie.</h2>
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uxoNrup1y5g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Mr-s7c_WY60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uuOhw4tfRQw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<div class="video-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fUMlCKRUqcw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<p align="center">
+<img style="max-width: 50%;" src="/assets/img/blogs/anime_review/lizandblue/bye.jpg" />
+</p>]]></content><author><name>Abhijit Leihaorambam</name></author><category term="anime review" /><summary type="html"><![CDATA[A short review on Liz and the Blue Bird movie]]></summary></entry></feed>

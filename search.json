@@ -1,0 +1,216 @@
+[
+    
+        {
+            "title": "I switched to jekyll!!",
+            "tags": "jekyll",
+            "url": "/blog_posts/jekyll/",
+            "date": "08 Jun 2024",
+            "description": "This is my first jekyll blog!"
+        } ,
+    
+        {
+            "title": "Setting Up C SDL2 with subilme text for window and linux",
+            "tags": "tutorialcpp",
+            "url": "/blog_posts/Post4/",
+            "date": "15 Oct 2022",
+            "description": "Setup C sdl2 develpoment project using sublime text."
+        } ,
+    
+        {
+            "title": "Girl&#39;s last tour essay [SPOILER]",
+            "tags": "essay",
+            "url": "/blog_posts/Post3/",
+            "date": "19 Mar 2022",
+            "description": "A post apocalytic hopelessness story, heavy spoiler warning watch the series first!!"
+        } ,
+    
+        {
+            "title": "Liz and the Blue Bird movie review",
+            "tags": "anime review",
+            "url": "/blog_posts/Post2/",
+            "date": "19 Mar 2022",
+            "description": " A short review on Liz and the Blue Bird movie"
+        } ,
+    
+        {
+            "title": "Violet Evergarden the movie review",
+            "tags": "anime review",
+            "url": "/blog_posts/Post1/",
+            "date": "19 Mar 2022",
+            "description": " A short review on violet evergarden the movie"
+        } 
+    
+    ,
+    
+    {
+      
+    } ,
+    
+    {
+      
+    } ,
+    
+    {
+      
+         "title"    : "Art Gallery",
+         "url"      : "/art/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Ancient Ritual Site",
+         "url"      : "/_pages/art/ancient/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Cave UE5",
+         "url"      : "/_pages/art/cave/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Night City",
+         "url"      : "/_pages/art/city/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Critter",
+         "url"      : "/_pages/art/critter/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Cyborg",
+         "url"      : "/_pages/art/Cyborg/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Castle in the sky fan made",
+         "url"      : "/_pages/art/ghibli/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Blog Posts",
+         "url"      : "/blog_posts/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "My Character",
+         "url"      : "/_pages/art/MyChar/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Persona 3 reload aigis fanart",
+         "url"      : "/_pages/art/p3/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Persona 4 fan art",
+         "url"      : "/_pages/art/p4/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "tag",
+         "url"      : "/blog_posts/tag/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Serpent boss fight",
+         "url"      : "/_pages/art/serpent/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Violet Evegarden Fan Art",
+         "url"      : "/_pages/art/violet/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Violet Evegarden CryEngine Fan Art",
+         "url"      : "/_pages/art/violetCE/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Labbo stylized level design CE5",
+         "url"      : "/_pages/art/labbo/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Game Projects",
+         "url"      : "/_pages/project/game/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Mobile app Projects",
+         "url"      : "/_pages/project/mobile/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Other Projects",
+         "url"      : "/_pages/project/other/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Tools and utility Projects",
+         "url"      : "/_pages/project/tool/"
+      
+    } ,
+    
+    {
+      
+         "title"    : "Robot",
+         "url"      : "/_pages/art/robot/"
+      
+    } ,
+    
+    {
+      
+    } ,
+    
+    {
+      
+    } ,
+    
+    {
+      
+    } ,
+    
+    {
+      
+    } 
+    
+]
