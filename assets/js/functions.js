@@ -59,28 +59,28 @@ $(document).on('click', '#btnUtilityPage', function(){
     if($('#id-tool').length > 0){
         return;
     }
-    document.location.href='/_pages/project/tool/';
+    document.location.href='/project/tool/';
 });
 
 $(document).on('click', '#btnOtherPage', function(){
     if($('#id-other').length > 0){
         return;
     }
-    document.location.href='/_pages/project/other/';
+    document.location.href='/project/other/';
 });
 
 $(document).on('click', '#btnGamePage', function(){
     if($('#id-game').length > 0){
         return;
     }
-    document.location.href='/_pages/project/game/';
+    document.location.href='/project/game/';
 });
 
 $(document).on('click', '#btnMobilePage', function(){
     if($('#id-mobile').length > 0){
         return;
     }
-    document.location.href='/_pages/project/mobile/';
+    document.location.href='/project/mobile/';
 });
 
 $(document).on('click', '#btnResume', function(){
