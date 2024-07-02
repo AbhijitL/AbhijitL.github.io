@@ -17,6 +17,17 @@ SimpleJekyllSearch({
 
 
 // Events
+
+// Ready Function
+$(document).ready(
+    function(){
+        if($('#pic-of-me').length == 0){
+            return;
+        }
+        $("#pic-asci").attr({style: "display: none;"});
+    }
+);
+
 $(document).ready(make_chart_from_data);
 
 jQuery(window).on( 'load', function(){
@@ -109,11 +120,10 @@ async function get_json_data(){
 
 async function make_chart_from_data(){
 
-    $("#pic-asci").attr({style: "display: none;"});
-
     if($('#chartElement').length == 0){
         return;
     }
+    
     var color_palete = ["#F2E1AE", "#BFAE8E", "#8E8870", "#BF9A84"]
     var data = await get_json_data();
     var no_of_total_Values = 0;
