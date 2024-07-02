@@ -108,6 +108,9 @@ async function get_json_data(){
 }
 
 async function make_chart_from_data(){
+
+    $("#pic-asci").attr({style: "display: none;"});
+
     if($('#chartElement').length == 0){
         return;
     }
@@ -216,3 +219,15 @@ function open_link(id){
     var val = $(id).attr('data-value');
     window.open(val, "_blank");
 }
+
+
+$("#pic-of-me").hover(
+    function(){
+        $("#pic-jpg").attr({style: "display: none;"});
+        $("#pic-asci").attr({style: "visibility: show;"});
+    },
+    function() {
+        $("#pic-jpg").attr({style: "visibility: show;"});
+        $("#pic-asci").attr({style: "display: none;"});
+    }
+);
