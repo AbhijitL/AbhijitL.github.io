@@ -828,6 +828,33 @@ span.post-meta {
   font-size: 1rem;
 }
 
+.gifypet {
+  background-color: #dcd8c0;
+  box-shadow: 5px 5px 0 rgba(77, 73, 62, 0.6);
+  z-index: 2;
+  position: fixed;
+  top: 100px;
+  right: 46px;
+}
+
+@media screen and (max-width: 1332px) {
+  .gifypet {
+    display: none !important;
+  }
+}
+.credit {
+  padding: 10px 5px 10px 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.credit > * {
+  margin-left: 5px;
+}
+
 /* Galleries */
 .gallery {
   clear: both;

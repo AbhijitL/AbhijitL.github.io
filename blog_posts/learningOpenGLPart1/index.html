@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta content="IE-edge, chrome=1" http-equiv="X-UA-Compatable">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Official site of Abhijit Leihaorambam">
+<title>AbhijitL</title>
+<link rel="icon" type="image/x-icon" href="/favicon.jpg">
+<script src="https://kit.fontawesome.com/4809e57cea.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+    </head>
+    <header>
+        <!-- Nav -->
+<nav class="navbar">
+    <div class="Cfigure">
+        <div class="Cfigcaption"> AbhijitL </div>
+        <div class="Cbutton" id="btnHomePage">Home</div>
+        <div class="Cbutton" id="btnArtPage">Art</div>
+        <div class="Cbutton" id="btnBlogPostsPage">Blogs</div>
+        <div class="Cbutton" id="btnProjects" >Projects</div>
+        <div id="id-slide" class="slide-down give-border">
+            <div class="Cbutton" id="btnGamePage" >Games</div>
+            <div class="Cbutton" id="btnMobilePage" >Mobile App</div>
+            <div class="Cbutton" id="btnUtilityPage" >Tools Utility</div>
+            <div class="Cbutton" id="btnOtherPage" >Other</div>
+        </div>
+        <div class="Cbutton" id="btnAboutPage">About</div>
+    </div>
+</nav>
+<!-- End of Nav -->
+        <div class="gifypet">
+    <iframe width="314" height="321" scrolling="no" src="https://gifypet.neocities.org/pet/pet.html?name=black&dob=1721115585&gender=m&element=Earth&pet=cat.gif&map=tree.jpg&background=&tablecolor=%23ff486e&textcolor=black" frameborder="0"></iframe>
+</div>
+        <div class="pattern">
+            <div>
+              <div class="pattern-inner"></div>
+            </div>
+        </div>
+        <div class="search-bar-container">
+    <div id="search-input" class="search-bar give-shadow">
+        <input
+        class="search-input"
+        type="text"
+        id="id-search"
+        placeholder="Search here...."
+        />
+    </div>    
+</div>
+    
+<div class="search-result-container">
+    <ul id="results-container"></ul>
+</div>
+
+
+
+    </header>
+    <body>
+        <div>
+            <h1 style="text-align: center;">Libera me from the Hell.</h1>
+        </div>
+        <div class="body-content">
+    <div class="container">
+        <div class="row">
+            <div class="content">
+                <h1>Learning opengl part 1</h1>
+            </div>
+            <div class="blog-thumb">
+                <img style="max-width: 80%;" class="give-shadow" src=" /assets/img/blogs/programming/opengl/opengl1.png " />
+            </div>
+            <div>
+                <p style="text-align: left; margin-left: 5px;">Published date: 16 Jul 2024   -Author: Abhijit Leihaorambam</p>
+            </div>
+            <div >
+                <p style="text-align: left; margin-left: 5px;">Tags:
+                    
+                        <i class="fa fa-tags" style="color:#a47272;"></i>
+                        <a href="/blog_posts/tag/#opengl" style="text-decoration:none; color:#891c09;">opengl</a>
+                    
+                        <i class="fa fa-tags" style="color:#a47272;"></i>
+                        <a href="/blog_posts/tag/#cpp" style="text-decoration:none; color:#891c09;">cpp</a>
+                    
+                        <i class="fa fa-tags" style="color:#a47272;"></i>
+                        <a href="/blog_posts/tag/#tutorial" style="text-decoration:none; color:#891c09;">tutorial</a>
+                    
+                </p>
+            </div>
+            <div class=" content give_margin_right_lil blog-post">
+                <p><code>In this blog i didn't specify how to setup the project!. There are lots of tutorial online on how to setup the libraries.</code></p>
+
+<p>This is from my journey on learning computer graphics with opengl 4.
+As of my learning OpenGL is not a library but an interface to our graphics.
+Where the actual implementation is done by different hardware manufacturers with same interface.</p>
+<h2 id="libraries">Libraries</h2>
+<p>I use GLFW for window creation and handling and GLEW for OpenGl interfacing.
+And I am using Visual Studio 2022.</p>
+
+<p>GLFW handles the opengl context tied to a window on the OS.
+GLEW makes sure we include the latest opengl headers and extensions.</p>
+<h2 id="creating-a-window">Creating a window</h2>
+
+<div class="language-cpp highlighter-coderay"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
+<a href="#n2" name="n2">2</a>
+<a href="#n3" name="n3">3</a>
+<a href="#n4" name="n4">4</a>
+<strong><a href="#n5" name="n5">5</a></strong>
+<a href="#n6" name="n6">6</a>
+<a href="#n7" name="n7">7</a>
+<a href="#n8" name="n8">8</a>
+</pre></td>
+  <td class="code"><pre><span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;GL/glew.h&gt;</span>
+<span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;GLFW/glfw3.h&gt;</span>
+<span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;iostream&gt;</span>
+
+<span style="color:#0a8;font-weight:bold">int</span> main(){
+
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">0</span>;
+}
+</pre></td>
+</tr></table>
+</div>
+<p>First of all let’s include the headers for GLEW and GLFW, and make sure glew header is before the glfw otherwise it won’t build.</p>
+
+<p>In the main function.</p>
+<div class="language-cpp highlighter-coderay"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
+<a href="#n2" name="n2">2</a>
+<a href="#n3" name="n3">3</a>
+<a href="#n4" name="n4">4</a>
+<strong><a href="#n5" name="n5">5</a></strong>
+</pre></td>
+  <td class="code"><pre><span style="color:#080;font-weight:bold">if</span> (!glfwInit())
+{
+    fprintf(stderr, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Error could not start GLFW3</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>);
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">1</span>;
+}
+</pre></td>
+</tr></table>
+</div>
+<p><a href="https://www.glfw.org/docs/3.3/group__init.html#ga317aac130a235ab08c6db0834907d85e">glfwInit()</a> starts up the GL context and OS window using GLFW helper lib.
+It is put inside a if statement to see if the initilization is correct or not.
+We use <a href="https://cplusplus.com/reference/cstdio/fprintf/">fprintf()</a> to print the error code if failure and lastly return 1 to tell the program EXIT_FAILURE.</p>
+
+<div class="language-cpp highlighter-coderay"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
+<a href="#n2" name="n2">2</a>
+<a href="#n3" name="n3">3</a>
+<a href="#n4" name="n4">4</a>
+<strong><a href="#n5" name="n5">5</a></strong>
+<a href="#n6" name="n6">6</a>
+<a href="#n7" name="n7">7</a>
+<a href="#n8" name="n8">8</a>
+</pre></td>
+  <td class="code"><pre>GLFWwindow* window = glfwCreateWindow(<span style="color:#00D">640</span>, <span style="color:#00D">480</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Hello world</span><span style="color:#710">&quot;</span></span>, <span style="color:#069">NULL</span>, <span style="color:#069">NULL</span>);
+<span style="color:#080;font-weight:bold">if</span> (!window)
+{
+    fprintf(stderr, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Error cannot open window with GLFW3</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>);
+    glfwTerminate();
+    <span style="color:#080;font-weight:bold">return</span> EXIT_FAILURE;
+}
+glfwMakeContextCurrent(window);
+</pre></td>
+</tr></table>
+</div>
+<p><a href="https://www.glfw.org/docs/3.3/group__window.html#ga3555a418df92ad53f917597fe2f64aeb">glfwCreateWindow</a>(int width, int height, const char* title, GLFWmonitor* monitor, GLFWwindow* share) creates a window taking the required paramters
+we put null in monitor and share.
+If the window creation is failed we print the errors and called <a href="https://www.glfw.org/docs/3.3/group__init.html#gaaae48c0a18607ea4a4ba951d939f0901">glfwTermate()</a> to destroy all of the glfw stuffs. <a href="https://www.glfw.org/docs/3.3/group__context.html#ga1c04dc242268f827290fe40aa1c91157">glfwMakeContextCurrent()</a> makes the current opengl context on the calling thread this must be at a single thread at a time and can be detached by passing NULL.</p>
+
+<div class="language-cpp highlighter-coderay"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
+<a href="#n2" name="n2">2</a>
+<a href="#n3" name="n3">3</a>
+<a href="#n4" name="n4">4</a>
+</pre></td>
+  <td class="code"><pre>glewExperimental = GL_TRUE;
+glewInit();
+glEnable(GL_DEPTH_TEST);
+glDepthFunc(GL_LESS);
+</pre></td>
+</tr></table>
+</div>
+<p>Now we start up the GLEW extention handler and initialize the glew.
+glewExperimental allows extension entry points to be loaded even if it’s not present.</p>
+
+<p><code>opengl extension are means to provide new or expanded features that is not included in the core</code></p>
+
+<p>glEnable() enables various capablities by passing the right enum such as GL_DEPTH_TEST.
+GL_DEPTH_TEST enables depth testing.
+glDepthFunc() is passed GL_LESS.
+Here is a good <a href="https://www.youtube.com/watch?v=uJzXDkgm5Fw">explanation</a> video of it.</p>
+
+<div class="language-cpp highlighter-coderay"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
+<a href="#n2" name="n2">2</a>
+<a href="#n3" name="n3">3</a>
+<a href="#n4" name="n4">4</a>
+<strong><a href="#n5" name="n5">5</a></strong>
+<a href="#n6" name="n6">6</a>
+<a href="#n7" name="n7">7</a>
+<a href="#n8" name="n8">8</a>
+</pre></td>
+  <td class="code"><pre>glClearColor(<span style="color:#60E">0</span><span style="color:#60E">.6f</span>, <span style="color:#60E">0</span><span style="color:#60E">.6f</span>, <span style="color:#60E">0</span><span style="color:#60E">.6f</span>, <span style="color:#60E">1</span><span style="color:#60E">.0f</span>);
+<span style="color:#080;font-weight:bold">while</span> (!glfwWindowShouldClose(window)) {
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    <span style="color:#777">// later code here</span>
+
+    glfwPollEvents();
+    glfwSwapBuffers(window);
+}
+</pre></td>
+</tr></table>
+</div>
+<p><a href="https://registry.khronos.org/OpenGL-Refpages/gl4/html/glClearColor.xhtml">glClearColor()</a> takes GLFloat value for red, green, blue, and alpha this functiona clears the color buffer with color specified.
+We create a while loop where we put a function glfwWindowShouldClose() to make it run forever until and unless this function returns true.
+Later we are going to use this function <code>glfwSetWindowShouldClose(window, 1)</code> to set the opengl to make the loop close.
+glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT) this will clear the color buffer as well as the depth buffer, we will talk about this in later.
+glfwPollEvents() listen inputs from the OS so that we can use it to handles things such as getting key pressed, mouse clicks, etc.
+<a href="https://www.glfw.org/docs/3.0/group__context.html#ga15a5a1ee5b3c2ca6b15ca209a12efd14">glfwSwapBuffer(window)</a> it swaps the front and the back buffer. Drawing is done in back buffer after it is done it is swap with the front which is what we see on the screen.</p>
+
+<div class="language-cpp highlighter-coderay"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
+<a href="#n2" name="n2">2</a>
+</pre></td>
+  <td class="code"><pre>glfwTerminate();
+<span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">0</span>;
+</pre></td>
+</tr></table>
+</div>
+<p>After everything is done it is necessary to called the glfwTerminate().</p>
+
+<p>According to the docs</p>
+
+<p><code>destroys all remaining windows and cursors, restores any modified gamma ramps and frees any other allocated resources.</code></p>
+
+<p>The completed code should look like this.</p>
+
+<div class="language-cpp highlighter-coderay"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
+<a href="#n2" name="n2">2</a>
+<a href="#n3" name="n3">3</a>
+<a href="#n4" name="n4">4</a>
+<strong><a href="#n5" name="n5">5</a></strong>
+<a href="#n6" name="n6">6</a>
+<a href="#n7" name="n7">7</a>
+<a href="#n8" name="n8">8</a>
+<a href="#n9" name="n9">9</a>
+<strong><a href="#n10" name="n10">10</a></strong>
+<a href="#n11" name="n11">11</a>
+<a href="#n12" name="n12">12</a>
+<a href="#n13" name="n13">13</a>
+<a href="#n14" name="n14">14</a>
+<strong><a href="#n15" name="n15">15</a></strong>
+<a href="#n16" name="n16">16</a>
+<a href="#n17" name="n17">17</a>
+<a href="#n18" name="n18">18</a>
+<a href="#n19" name="n19">19</a>
+<strong><a href="#n20" name="n20">20</a></strong>
+<a href="#n21" name="n21">21</a>
+<a href="#n22" name="n22">22</a>
+<a href="#n23" name="n23">23</a>
+<a href="#n24" name="n24">24</a>
+<strong><a href="#n25" name="n25">25</a></strong>
+<a href="#n26" name="n26">26</a>
+<a href="#n27" name="n27">27</a>
+<a href="#n28" name="n28">28</a>
+<a href="#n29" name="n29">29</a>
+<strong><a href="#n30" name="n30">30</a></strong>
+<a href="#n31" name="n31">31</a>
+<a href="#n32" name="n32">32</a>
+<a href="#n33" name="n33">33</a>
+<a href="#n34" name="n34">34</a>
+<strong><a href="#n35" name="n35">35</a></strong>
+<a href="#n36" name="n36">36</a>
+<a href="#n37" name="n37">37</a>
+</pre></td>
+  <td class="code"><pre><span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;GL/glew.h&gt;</span>
+<span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;GLFW/glfw3.h&gt;</span>
+<span style="color:#579">#include</span> <span style="color:#B44;font-weight:bold">&lt;iostream&gt;</span>
+
+<span style="color:#0a8;font-weight:bold">int</span> main() {
+
+    <span style="color:#080;font-weight:bold">if</span> (!glfwInit())
+    {
+        fprintf(stderr, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Error could not start GLFW3</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>);
+        <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">1</span>;
+    }
+    GLFWwindow* window = glfwCreateWindow(<span style="color:#00D">640</span>, <span style="color:#00D">480</span>, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Hello world</span><span style="color:#710">&quot;</span></span>, <span style="color:#069">NULL</span>, <span style="color:#069">NULL</span>);
+    <span style="color:#080;font-weight:bold">if</span> (!window)
+    {
+        fprintf(stderr, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Error cannot open window with GLFW3</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>);
+        glfwTerminate();
+        <span style="color:#080;font-weight:bold">return</span> EXIT_FAILURE;
+    }
+    glfwMakeContextCurrent(window);
+
+    <span style="color:#777">// Glew Init</span>
+    glewExperimental = GL_TRUE;
+    glewInit();
+    glEnable(GL_DEPTH_TEST);
+    glDepthFunc(GL_LESS);
+
+    glClearColor(<span style="color:#60E">0</span><span style="color:#60E">.6f</span>, <span style="color:#60E">0</span><span style="color:#60E">.6f</span>, <span style="color:#60E">0</span><span style="color:#60E">.6f</span>, <span style="color:#60E">1</span><span style="color:#60E">.0f</span>);
+    <span style="color:#080;font-weight:bold">while</span> (!glfwWindowShouldClose(window)) {
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        <span style="color:#777">// later code here</span>
+
+        glfwPollEvents();
+        glfwSwapBuffers(window);
+    }
+    glfwTerminate();
+    <span style="color:#080;font-weight:bold">return</span> <span style="color:#00D">0</span>;
+}
+</pre></td>
+</tr></table>
+</div>
+<p>When you run the program you should get like this.</p>
+
+<p><img src="/assets/img/blogs/programming/opengl/opengl2.png" /></p>
+
+<h1 id="to-be-coninued">TO BE CONINUED….</h1>
+
+            </div>
+            <div >
+                <p style="text-align: left; margin-left: 5px;">Tags:
+                    
+                        <i class="fa fa-tags" style="color:#a47272;"></i>
+                        <a href="/blog_posts/tag/#opengl" style="text-decoration:none; color:#891c09;">opengl</a>
+                    
+                        <i class="fa fa-tags" style="color:#a47272;"></i>
+                        <a href="/blog_posts/tag/#cpp" style="text-decoration:none; color:#891c09;">cpp</a>
+                    
+                        <i class="fa fa-tags" style="color:#a47272;"></i>
+                        <a href="/blog_posts/tag/#tutorial" style="text-decoration:none; color:#891c09;">tutorial</a>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+        <script type="text/javascript" src = "/assets/js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src = "/assets/js/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src = "/assets/js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src = "/assets/js/jekyll-search.js"></script>
+<script type="text/javascript" src = "/assets/js/functions.js"></script>
+
+        <div>
+            <h1 style="text-align: center;">I will convey your will to this world.</h1>
+        </div>
+        <div class="credit">
+            <img src="/assets/img/footer1.gif" ></img>
+            <img src="/assets/img/anybrowser2.gif" ></img>
+            <img src="/assets/img/noteoth2.gif" ></img>
+            <img src="/assets/img/monitoronly.gif" ></img>
+        </div>
+        <div class="pattern">
+            <div>
+              <div class="pattern-inner"></div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,6 +1,14 @@
 [
     
         {
+            "title": "Learning opengl part 1",
+            "tags": "openglcpptutorial",
+            "url": "/blog_posts/learningOpenGLPart1/",
+            "date": "16 Jul 2024",
+            "description": "We will be going to make some triangles!!"
+        } ,
+    
+        {
             "title": "I switched to jekyll!!",
             "tags": "jekyll",
             "url": "/blog_posts/jekyll/",
@@ -206,6 +214,13 @@
     } ,
     
     {
+      
+    } ,
+    
+    {
+      
+         "title"    : "Blog Posts",
+         "url"      : "/blog_posts/page2/"
       
     } ,
     
